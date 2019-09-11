@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="CommandHandlers" />
+      <Folder Include="EventHandlers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IssueTracker.Core.Domain\IssueTracker.Core.Domain.csproj" />
+      <ProjectReference Include="..\IssueTracker.Core.Handlers\IssueTracker.Core.Handlers.csproj" />
+      <ProjectReference Include="..\IssueTracker.Features.Issues.Domain\IssueTracker.Features.Issues.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

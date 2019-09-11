@@ -1,0 +1,14 @@
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\bin\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.deps.json
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\bin\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.dll
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\bin\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.pdb
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\obj\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.csprojAssemblyReference.cache
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\obj\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\obj\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.AssemblyInfoInputs.cache
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\obj\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.AssemblyInfo.cs
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\obj\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.csproj.CopyComplete
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\obj\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.dll
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\obj\Debug\netcoreapp2.2\IssueTracker.Core.WebApi.pdb
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\bin\Debug\netcoreapp2.2\IssueTracker.Core.Framework.dll
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.WebApi\bin\Debug\netcoreapp2.2\IssueTracker.Core.Framework.pdb

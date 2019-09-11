@@ -1,0 +1,57 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Features.Issues.Handlers\\IssueTracker.Features.Issues.Handlers.csproj",
+    "projectName": "IssueTracker.Features.Issues.Handlers",
+    "projectPath": "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Features.Issues.Handlers\\IssueTracker.Features.Issues.Handlers.csproj",
+    "outputPath": "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Features.Issues.Handlers\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Core.Domain\\IssueTracker.Core.Domain.csproj": {
+            "projectPath": "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Core.Domain\\IssueTracker.Core.Domain.csproj"
+          },
+          "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Core.Handlers\\IssueTracker.Core.Handlers.csproj": {
+            "projectPath": "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Core.Handlers\\IssueTracker.Core.Handlers.csproj"
+          },
+          "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Features.Issues.Domain\\IssueTracker.Features.Issues.Domain.csproj": {
+            "projectPath": "C:\\Users\\dvetrov\\RiderProjects\\IssueTracker\\IssueTracker.Features.Issues.Domain\\IssueTracker.Features.Issues.Domain.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

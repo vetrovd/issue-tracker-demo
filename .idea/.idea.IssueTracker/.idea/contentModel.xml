@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\dvetrov\.Rider2019.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\dvetrov\.Rider2019.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\dvetrov\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\dvetrov\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_IssueTracker.-1686292975.00" t="ExcludeRecursive" />
+    <e p="C:\Users\dvetrov\RiderProjects\IssueTracker" t="IncludeFlat">
+      <e p="Core" t="Include" />
+      <e p="Features" t="Include">
+        <e p="Issues" t="Include" />
+        <e p="Users" t="Include" />
+      </e>
+      <e p="Infrastructure" t="Include" />
+      <e p="IssueTracker.Core.Domain" t="IncludeRecursive">
+        <e p="Abstractions" t="Include">
+          <e p="Command.cs" t="Include" />
+          <e p="DomainModel.cs" t="Include" />
+          <e p="Event.cs" t="Include" />
+          <e p="Query.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Exceptions" t="Include">
+          <e p="Exception.cs" t="Include" />
+          <e p="InvalidFormatException.cs" t="Include" />
+          <e p="NotFoundException.cs" t="Include" />
+        </e>
+        <e p="IssueTracker.Core.Domain.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Core.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.Core.Handlers" t="IncludeRecursive">
+        <e p="Abstractions" t="Include">
+          <e p="CommandHandler.cs" t="Include" />
+          <e p="QueryHandler.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Decorators" t="Include">
+          <e p="LogDecorator.cs" t="Include" />
+          <e p="ValidationDecorator.cs" t="Include" />
+        </e>
+        <e p="IssueTracker.Core.Handlers.csproj" t="IncludeRecursive" />
+        <e p="Module.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Core.Handlers.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.Core.WebApi" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CoreApiController.cs" t="Include" />
+        <e p="IssueTracker.Core.WebApi.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Core.WebApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.Features.Issues.Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Commands" t="Include">
+          <e p="ChangeIssue.cs" t="Include" />
+          <e p="CreateIssue.cs" t="Include" />
+          <e p="DeleteIssue.cs" t="Include" />
+        </e>
+        <e p="Entities" t="Include">
+          <e p="Issue.cs" t="Include" />
+        </e>
+        <e p="Events" t="Include" />
+        <e p="IssueTracker.Features.Issues.Domain.csproj" t="IncludeRecursive" />
+        <e p="Module.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Features.Issues.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Queries" t="Include">
+          <e p="GetIssue.cs" t="Include" />
+          <e p="GetIssues.cs" t="Include" />
+        </e>
+        <e p="Validators" t="Include">
+          <e p="GetIssueCommandValidator.cs" t="Include" />
+        </e>
+      </e>
+      <e p="IssueTracker.Features.Issues.Handlers" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CommandHandlers" t="Include" />
+        <e p="EventHandlers" t="Include" />
+        <e p="IssueTracker.Features.Issues.Handlers.csproj" t="IncludeRecursive" />
+        <e p="Module.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Features.Issues.Handlers.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="QueryHandlers" t="Include">
+          <e p="GetIssueHandler.cs" t="Include" />
+          <e p="GetIssuesHandler.cs" t="Include" />
+        </e>
+      </e>
+      <e p="IssueTracker.Features.Issues.WebApi" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Issues" t="Include">
+          <e p="IssueDto.cs" t="Include" />
+          <e p="IssuesController.cs" t="Include" />
+        </e>
+        <e p="IssueTracker.Features.Issues.WebApi.csproj" t="IncludeRecursive" />
+        <e p="Module.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Features.Issues.WebApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.sln" t="IncludeFlat" />
+      <e p="IssueTracker.Web.App" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IssueTracker.Web.App.csproj" t="IncludeRecursive" />
+        <e p="Module.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Web.App.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

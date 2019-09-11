@@ -1,0 +1,12 @@
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\bin\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.deps.json
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\bin\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.dll
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\bin\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.pdb
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\bin\Debug\netcoreapp2.2\IssueTracker.Core.Framework.dll
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\bin\Debug\netcoreapp2.2\IssueTracker.Core.Framework.pdb
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\obj\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.csprojAssemblyReference.cache
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\obj\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.csproj.CoreCompileInputs.cache
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\obj\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.AssemblyInfoInputs.cache
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\obj\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.AssemblyInfo.cs
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\obj\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.csproj.CopyComplete
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\obj\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.dll
+C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Features.Issues.Domain\obj\Debug\netcoreapp2.2\IssueTracker.Features.Issues.Domain.pdb
