@@ -1,9 +1,0 @@
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\bin\Debug\netcoreapp2.2\IssueTracker.Core.Framework.deps.json
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\bin\Debug\netcoreapp2.2\IssueTracker.Core.Framework.dll
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\bin\Debug\netcoreapp2.2\IssueTracker.Core.Framework.pdb
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\obj\Debug\netcoreapp2.2\IssueTracker.Core.Framework.csprojAssemblyReference.cache
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\obj\Debug\netcoreapp2.2\IssueTracker.Core.Framework.csproj.CoreCompileInputs.cache
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\obj\Debug\netcoreapp2.2\IssueTracker.Core.Framework.AssemblyInfoInputs.cache
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\obj\Debug\netcoreapp2.2\IssueTracker.Core.Framework.AssemblyInfo.cs
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\obj\Debug\netcoreapp2.2\IssueTracker.Core.Framework.dll
-C:\Users\dvetrov\RiderProjects\IssueTracker\IssueTracker.Core.Framework\obj\Debug\netcoreapp2.2\IssueTracker.Core.Framework.pdb
