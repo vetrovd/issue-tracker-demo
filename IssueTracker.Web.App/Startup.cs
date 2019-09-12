@@ -6,8 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace IssueTracker.Web.App
 {
+	using System;
+	using System.IO;
 	using System.Reflection;
 	using Autofac;
+	using Swashbuckle.AspNetCore.Swagger;
 
 	public class Startup
 	{
@@ -28,6 +31,16 @@ namespace IssueTracker.Web.App
 				.AddApplicationPart(issuesWebApiAssembly)
 				.SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+			// Register the Swagger generator, defining 1 or more Swagger documents
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+			});
+
+			services.ConfigureSwaggerGen(options =>
+			{
+				options.CustomSchemaIds(x => x.FullName);
+			});
 			services.AddLogging();
 		}
 
@@ -61,6 +74,13 @@ namespace IssueTracker.Web.App
 
 			// app.UseHttpsRedirection();
 			app.UseMvc();
+
+			app.UseSwagger();
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Issue tracker API");
+				c.RoutePrefix = "apidoc";
+			});
 		}
 	}
 }

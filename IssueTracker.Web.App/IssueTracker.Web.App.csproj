@@ -8,6 +8,8 @@
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+        <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
     </ItemGroup>
 
     <ItemGroup>
@@ -15,11 +17,5 @@
       <ProjectReference Include="..\IssueTracker.Features.Issues.Handlers\IssueTracker.Features.Issues.Handlers.csproj" />
       <ProjectReference Include="..\IssueTracker.Features.Issues.WebApi\IssueTracker.Features.Issues.WebApi.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
-        <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.configuration.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
+    
 </Project>

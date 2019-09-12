@@ -20,7 +20,9 @@ namespace IssueTracker.Features.Issues.WebApi.Issues
 			_logger = loggerFactory.CreateLogger<IssuesController>();
 		}
 
-		[Route("")]
+		[HttpGet]
+		[ProducesResponseType(typeof(List<Issue>), 200)]
+		[ProducesResponseType(400)]
 		public async Task<List<Issue>> Issues()
 		{
 			_logger.LogWarning(">>>>>> IssuesController -> Issues");
@@ -29,7 +31,7 @@ namespace IssueTracker.Features.Issues.WebApi.Issues
 			return result;
 		}
 
-		[Route("{id}")]
+		[HttpGet("{id}")]
 		public async Task<Issue> Issue(int id)
 		{
 			_logger.LogWarning($">>>>>> IssuesController -> Issue {id}");
