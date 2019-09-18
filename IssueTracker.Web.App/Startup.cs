@@ -6,10 +6,15 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace IssueTracker.Web.App
 {
-	using System;
-	using System.IO;
 	using System.Reflection;
 	using Autofac;
+	using IssueTracker.Infrastructure.Data.Context;
+	using IssueTracker.Issues.WebApi;
+	using IssueTracker.Web.App.IoC;
+	using IssueTracker.Web.App.IoC.Framework;
+	using IssueTracker.Web.App.IoC.Infrastructure;
+	using IssueTracker.Web.App.IoC.Issues;
+	using Microsoft.EntityFrameworkCore;
 	using Swashbuckle.AspNetCore.Swagger;
 
 	public class Startup
@@ -24,12 +29,15 @@ namespace IssueTracker.Web.App
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			var issuesWebApiAssembly = typeof(Features.Issues.WebApi.Module).GetTypeInfo().Assembly;
-
 			services
 				.AddMvc()
-				.AddApplicationPart(issuesWebApiAssembly)
+				.AddApplicationPart(typeof(IssueController).GetTypeInfo().Assembly)
+				.AddApplicationPart(typeof(IssueTracker.Users.WebApi.Module).GetTypeInfo().Assembly)
 				.SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+			services.AddEntityFrameworkNpgsql()
+				.AddDbContext<ApplicationDbContext>()
+				.BuildServiceProvider();
 
 			// Register the Swagger generator, defining 1 or more Swagger documents
 			services.AddSwaggerGen(c =>
@@ -52,11 +60,15 @@ namespace IssueTracker.Web.App
 		// "Without ConfigureContainer" mechanism shown later.
 		public void ConfigureContainer(ContainerBuilder builder)
 		{
-			builder.RegisterModule(new Core.Handlers.Module());
+			builder.RegisterModule(new RegisterDecoratorsModule());
+			builder.RegisterModule(new InfrastructureModule());
 
-			builder.RegisterModule(new Features.Issues.Domain.Module());
-			builder.RegisterModule(new Features.Issues.Handlers.Module());
-			builder.RegisterModule(new Features.Issues.WebApi.Module());
+			builder.RegisterModule(new IssuesDomainModule());
+			builder.RegisterModule(new IssuesHandlersModule());
+
+			builder.RegisterModule(new WebAppModule());
+			//builder.RegisterModule(new Issues.Handlers.Module());
+			//builder.RegisterModule(new);
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -81,6 +93,9 @@ namespace IssueTracker.Web.App
 				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Issue tracker API");
 				c.RoutePrefix = "apidoc";
 			});
+
+			var context = app.ApplicationServices.GetRequiredService<ApplicationDbContext>();
+			context.Database.Migrate();
 		}
 	}
 }
