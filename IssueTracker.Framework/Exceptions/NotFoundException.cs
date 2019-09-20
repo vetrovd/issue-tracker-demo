@@ -1,7 +1,6 @@
 namespace IssueTracker.Framework.Exceptions
 {
-	public abstract class NotFoundException: Exception
+	public abstract class NotFoundException : Exception
 	{
-		
 	}
 }

@@ -2,7 +2,7 @@
 {
 	using MediatR;
 
-	public abstract class Command<TResponse>: IRequest<TResponse>
+	public abstract class Command<TResponse> : IRequest<TResponse>
 	{
 	}
 }

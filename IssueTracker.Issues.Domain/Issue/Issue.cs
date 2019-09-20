@@ -7,10 +7,9 @@ namespace IssueTracker.Issues.Domain.Issue
 	{
 		protected Issue()
 		{
-
 		}
 
-		public Issue(Name name, Description description): this(name, description, new Status())
+		public Issue(Name name, Description description) : this(name, description, new Status())
 		{
 		}
 

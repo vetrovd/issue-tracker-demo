@@ -1,7 +1,5 @@
 namespace IssueTracker.Users.WebApi
 {
-	using System.Collections.Generic;
-	using System.Threading.Tasks;
 	using IssueTracker.Framework.WebApi;
 	using MediatR;
 	using Microsoft.AspNetCore.Mvc;

@@ -12,6 +12,5 @@ namespace IssueTracker.Infrastructure.Data
 				.AsImplementedInterfaces()
 				.InstancePerLifetimeScope();
 		}
-		
 	}
 }

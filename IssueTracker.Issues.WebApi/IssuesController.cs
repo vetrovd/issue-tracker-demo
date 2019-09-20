@@ -21,7 +21,7 @@ namespace IssueTracker.Issues.WebApi
 
 		[HttpGet("")]
 		[ProducesResponseType(typeof(List<Issue>), 200)]
-		[ProducesResponseType(typeof(List<ErrorDto>),400)]
+		[ProducesResponseType(typeof(List<ErrorDto>), 400)]
 		public async Task<List<Issue>> GetAllIssues()
 		{
 			var result = await _mediator.Send(new GetIssuesQuery());
@@ -30,7 +30,7 @@ namespace IssueTracker.Issues.WebApi
 
 		[HttpGet("search")]
 		[ProducesResponseType(typeof(List<Issue>), 200)]
-		[ProducesResponseType(typeof(List<ErrorDto>),400)]
+		[ProducesResponseType(typeof(List<ErrorDto>), 400)]
 		public async Task<List<Issue>> SearchIssues([FromQuery] string text)
 		{
 			var result = await _mediator.Send(new GetIssuesQuery());

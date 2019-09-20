@@ -4,7 +4,7 @@ namespace IssueTracker.Issues.Handlers.Queries
 	using IssueTracker.Framework.Abstractions.Domain;
 	using IssueTracker.Issues.Domain.Issue;
 
-	public class GetIssuesQuery: Query<List<Issue>>
+	public class GetIssuesQuery : Query<List<Issue>>
 	{
 	}
 }

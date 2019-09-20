@@ -4,7 +4,7 @@ namespace IssueTracker.Web.App.IoC.Issues
 	using IssueTracker.Issues.Domain.Issue;
 	using MediatR.Extensions.Autofac.DependencyInjection;
 
-	public class IssuesDomainModule: Autofac.Module
+	public class IssuesDomainModule : Module
 	{
 		protected override void Load(ContainerBuilder builder)
 		{

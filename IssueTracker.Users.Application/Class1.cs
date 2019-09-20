@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace IssueTracker.Users.Handlers
+﻿namespace IssueTracker.Users.Handlers
 {
 	public class Class1
 	{

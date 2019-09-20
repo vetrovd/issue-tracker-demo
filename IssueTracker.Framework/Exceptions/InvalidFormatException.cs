@@ -1,7 +1,6 @@
 namespace IssueTracker.Framework.Exceptions
 {
-	public class InvalidFormatException: Exception
+	public class InvalidFormatException : Exception
 	{
-		
 	}
 }

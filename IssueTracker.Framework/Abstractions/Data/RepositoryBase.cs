@@ -7,12 +7,14 @@ namespace IssueTracker.Framework.Abstractions.Data
 	using System.Threading.Tasks;
 	using IssueTracker.Framework.Abstractions.Domain;
 
-	public abstract class RepositoryBase<TEntity, TPrimaryKey>: IRepository<TEntity, TPrimaryKey> where TEntity : DomainModel
+	public abstract class RepositoryBase<TEntity, TPrimaryKey> : IRepository<TEntity, TPrimaryKey>
+		where TEntity : DomainModel
 	{
 		public abstract IQueryable<TEntity> GetAll();
 
 		public abstract IQueryable<TEntity> GetAllIncluding(
 			params Expression<Func<TEntity, object>>[] propertySelectors);
+
 		public virtual List<TEntity> GetAllList()
 		{
 			return GetAll().ToList();
@@ -157,8 +159,8 @@ namespace IssueTracker.Framework.Abstractions.Data
 			return Task.FromResult(Count(predicate));
 		}
 
-		 // AbpRepositoryBase at:
-		 // https://github.com/aspnetboilerplate/aspnetboilerplate/blob/c0604b9b1347a3b9581bf97b4cae22db5b6bab1b/src/Abp/Domain/Repositories/AbpRepositoryBase.cs#L268
+		// AbpRepositoryBase at:
+		// https://github.com/aspnetboilerplate/aspnetboilerplate/blob/c0604b9b1347a3b9581bf97b4cae22db5b6bab1b/src/Abp/Domain/Repositories/AbpRepositoryBase.cs#L268
 		protected virtual Expression<Func<TEntity, bool>> CreateEqualityExpressionForId(TPrimaryKey id)
 		{
 			var lambdaParam = Expression.Parameter(typeof(TEntity));

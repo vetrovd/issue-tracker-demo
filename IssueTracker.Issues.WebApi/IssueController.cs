@@ -23,10 +23,10 @@ namespace IssueTracker.Issues.WebApi
 
 		[HttpGet("{id}")]
 		[ProducesResponseType(typeof(Issue), 200)]
-		[ProducesResponseType(typeof(List<ErrorDto>),400)]
+		[ProducesResponseType(typeof(List<ErrorDto>), 400)]
 		public async Task<Issue> GetIssueById([FromRoute] int id)
 		{
-			var result = await _mediator.Send(new GetIssueQuery() { Id = id });
+			var result = await _mediator.Send(new GetIssueQuery {Id = id});
 			return result;
 		}
 
@@ -40,7 +40,7 @@ namespace IssueTracker.Issues.WebApi
 		[HttpPut("{id}")]
 		public async Task<Issue> UpdateIssue([FromRoute] int id, [FromBody] GetIssueQuery issue)
 		{
-			var result = await _mediator.Send(new GetIssueQuery() { Id = id });
+			var result = await _mediator.Send(new GetIssueQuery {Id = id});
 			return result;
 		}
 
@@ -54,7 +54,7 @@ namespace IssueTracker.Issues.WebApi
 		[HttpPost("{id}/move")]
 		public async Task<Issue> MoveIssue([FromRoute] int id, CreateIssue transition)
 		{
-			var result = await _mediator.Send(new GetIssueQuery() { Id = id });
+			var result = await _mediator.Send(new GetIssueQuery {Id = id});
 			return result;
 		}
 	}

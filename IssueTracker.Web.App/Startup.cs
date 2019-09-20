@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace IssueTracker.Web.App
+﻿namespace IssueTracker.Web.App
 {
 	using System.Reflection;
 	using Autofac;
@@ -14,8 +8,14 @@ namespace IssueTracker.Web.App
 	using IssueTracker.Web.App.IoC.Framework;
 	using IssueTracker.Web.App.IoC.Infrastructure;
 	using IssueTracker.Web.App.IoC.Issues;
+	using Microsoft.AspNetCore.Builder;
+	using Microsoft.AspNetCore.Hosting;
+	using Microsoft.AspNetCore.Mvc;
 	using Microsoft.EntityFrameworkCore;
+	using Microsoft.Extensions.Configuration;
+	using Microsoft.Extensions.DependencyInjection;
 	using Swashbuckle.AspNetCore.Swagger;
+	using Module = IssueTracker.Users.WebApi.Module;
 
 	public class Startup
 	{
@@ -32,7 +32,7 @@ namespace IssueTracker.Web.App
 			services
 				.AddMvc()
 				.AddApplicationPart(typeof(IssueController).GetTypeInfo().Assembly)
-				.AddApplicationPart(typeof(IssueTracker.Users.WebApi.Module).GetTypeInfo().Assembly)
+				.AddApplicationPart(typeof(Module).GetTypeInfo().Assembly)
 				.SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 			services.AddEntityFrameworkNpgsql()
@@ -40,15 +40,9 @@ namespace IssueTracker.Web.App
 				.BuildServiceProvider();
 
 			// Register the Swagger generator, defining 1 or more Swagger documents
-			services.AddSwaggerGen(c =>
-			{
-				c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
-			});
+			services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info {Title = "My API", Version = "v1"}); });
 
-			services.ConfigureSwaggerGen(options =>
-			{
-				options.CustomSchemaIds(x => x.FullName);
-			});
+			services.ConfigureSwaggerGen(options => { options.CustomSchemaIds(x => x.FullName); });
 			services.AddLogging();
 		}
 

@@ -1,19 +1,18 @@
 namespace IssueTracker.Infrastructure.Data
 {
 	using System;
-	using System.Collections.Generic;
 	using System.Linq;
 	using System.Linq.Expressions;
 	using IssueTracker.Framework.Abstractions.Data;
 	using IssueTracker.Framework.Abstractions.Domain;
 	using Microsoft.EntityFrameworkCore;
 
-	public class EfRepository<TDbContext, TEntity, TPrimaryKey> : RepositoryBase<TEntity, TPrimaryKey> 
+	public class EfRepository<TDbContext, TEntity, TPrimaryKey> : RepositoryBase<TEntity, TPrimaryKey>
 		where TEntity : DomainModel
 		where TDbContext : DbContext
 	{
 		protected TDbContext Context { get; set; }
-		
+
 		public virtual DbSet<TEntity> Table => Context.Set<TEntity>();
 
 		public override IQueryable<TEntity> GetAll()
@@ -21,7 +20,8 @@ namespace IssueTracker.Infrastructure.Data
 			return GetAllIncluding();
 		}
 
-		public override IQueryable<TEntity> GetAllIncluding(params Expression<Func<TEntity, object>>[] propertySelectors)
+		public override IQueryable<TEntity> GetAllIncluding(
+			params Expression<Func<TEntity, object>>[] propertySelectors)
 		{
 			var query = Table.AsQueryable();
 			if (propertySelectors != null && propertySelectors.Length > 0)
@@ -59,7 +59,6 @@ namespace IssueTracker.Infrastructure.Data
 			if (entity != null)
 			{
 				Delete(entity);
-				return;
 			}
 		}
 

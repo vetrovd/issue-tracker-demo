@@ -7,7 +7,7 @@
 	[Area("api")]
 	[Consumes("application/json")]
 	[Produces("application/json")]
-	public abstract class CoreApiController : ControllerBase 
+	public abstract class CoreApiController : ControllerBase
 	{
 	}
 }

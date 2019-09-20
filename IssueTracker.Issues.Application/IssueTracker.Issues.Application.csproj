@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="CommandHandlers\Validators" />
       <Folder Include="EventHandlers" />
       <Folder Include="QueriesResults" />
     </ItemGroup>

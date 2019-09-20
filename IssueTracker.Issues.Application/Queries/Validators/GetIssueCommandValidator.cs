@@ -2,7 +2,7 @@ namespace IssueTracker.Issues.Handlers.Queries.Validators
 {
 	using FluentValidation;
 
-	public class GetIssueCommandValidator: AbstractValidator<GetIssueQuery>
+	public class GetIssueCommandValidator : AbstractValidator<GetIssueQuery>
 	{
 		public GetIssueCommandValidator()
 		{

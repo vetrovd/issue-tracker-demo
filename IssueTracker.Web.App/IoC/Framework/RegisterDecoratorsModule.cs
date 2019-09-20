@@ -7,17 +7,18 @@ namespace IssueTracker.Web.App.IoC.Framework
 	using Autofac;
 	using AutoMapper;
 	using IssueTracker.Framework.Abstractions.Domain;
-	using IssueTracker.Framework.Abstractions.Handlers;
 	using IssueTracker.Framework.Decorators;
 	using IssueTracker.Framework.Decorators.Interfaces;
 	using MediatR;
 	using MediatR.Extensions.Autofac.DependencyInjection;
+	using Module = Autofac.Module;
 
-	public class RegisterDecoratorsModule : Autofac.Module
+	public class RegisterDecoratorsModule : Module
 	{
 		protected override void Load(ContainerBuilder builder)
 		{
-			var assemblies = Directory.EnumerateFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll", SearchOption.TopDirectoryOnly)
+			var assemblies = Directory
+				.EnumerateFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll", SearchOption.TopDirectoryOnly)
 				.Where(filePath => Path.GetFileName(filePath).StartsWith("IssueTracker"))
 				.Select(Assembly.LoadFrom)
 				.ToArray();
@@ -45,8 +46,6 @@ namespace IssueTracker.Web.App.IoC.Framework
 
 			var assembly = typeof(DomainModel).Assembly;
 			builder.AddMediatR(assembly);
-
 		}
-		
 	}
 }

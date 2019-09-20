@@ -1,7 +1,6 @@
 namespace IssueTracker.Framework.Exceptions
 {
-	public abstract class Exception: System.Exception
+	public abstract class Exception : System.Exception
 	{
-		
 	}
 }

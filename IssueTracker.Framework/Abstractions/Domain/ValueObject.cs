@@ -11,12 +11,13 @@ namespace IssueTracker.Framework.Abstractions.Domain
 			{
 				return false;
 			}
+
 			return ReferenceEquals(left, null) || left.Equals(right);
 		}
 
 		protected static bool NotEqualOperator(ValueObject left, ValueObject right)
 		{
-			return !(EqualOperator(left, right));
+			return !EqualOperator(left, right);
 		}
 
 		protected abstract IEnumerable<object> GetAtomicValues();
@@ -28,9 +29,9 @@ namespace IssueTracker.Framework.Abstractions.Domain
 				return false;
 			}
 
-			ValueObject other = (ValueObject)obj;
-			IEnumerator<object> thisValues = GetAtomicValues().GetEnumerator();
-			IEnumerator<object> otherValues = other.GetAtomicValues().GetEnumerator();
+			var other = (ValueObject) obj;
+			var thisValues = GetAtomicValues().GetEnumerator();
+			var otherValues = other.GetAtomicValues().GetEnumerator();
 			while (thisValues.MoveNext() && otherValues.MoveNext())
 			{
 				if (ReferenceEquals(thisValues.Current, null) ^
@@ -45,6 +46,7 @@ namespace IssueTracker.Framework.Abstractions.Domain
 					return false;
 				}
 			}
+
 			return !thisValues.MoveNext() && !otherValues.MoveNext();
 		}
 

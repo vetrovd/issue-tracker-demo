@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Logging;
-
-namespace IssueTracker.Web.App
+﻿namespace IssueTracker.Web.App
 {
 	using Autofac.Extensions.DependencyInjection;
+	using Microsoft.AspNetCore;
+	using Microsoft.AspNetCore.Hosting;
+	using Microsoft.Extensions.Logging;
 
 	public class Program
 	{
@@ -13,8 +12,9 @@ namespace IssueTracker.Web.App
 			CreateWebHostBuilder(args).Build().Run();
 		}
 
-		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-			WebHost
+		public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+		{
+			return WebHost
 				.CreateDefaultBuilder(args)
 				.ConfigureServices(services => services.AddAutofac())
 				.ConfigureLogging((hostingContext, logging) =>
@@ -23,5 +23,6 @@ namespace IssueTracker.Web.App
 				})
 				.UseStartup<Startup>()
 				.CaptureStartupErrors(true);
+		}
 	}
 }
