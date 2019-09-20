@@ -1,4 +1,4 @@
-namespace IssueTracker.Infrastructure.Data
+namespace IssueTracker.Infrastructure.Data.Repository
 {
 	using System;
 	using System.Linq;
@@ -19,7 +19,9 @@ namespace IssueTracker.Infrastructure.Data
 		{
 			return GetAllForQueryIncluding();
 		}
-		public override IQueryable<TEntity> GetAllForQueryIncluding(params Expression<Func<TEntity, object>>[] propertySelectors)
+
+		public override IQueryable<TEntity> GetAllForQueryIncluding(
+			params Expression<Func<TEntity, object>>[] propertySelectors)
 		{
 			var query = Table.AsNoTracking();
 			if (propertySelectors != null && propertySelectors.Length > 0)

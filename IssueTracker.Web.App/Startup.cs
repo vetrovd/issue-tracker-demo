@@ -26,6 +26,8 @@
 
 		public IConfiguration Configuration { get; }
 
+		private IContainer ApplicationContainer { get; set; }
+
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
@@ -36,8 +38,8 @@
 				.SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 			services.AddEntityFrameworkNpgsql()
-				.AddDbContext<ApplicationDbContext>()
-				.BuildServiceProvider();
+				.AddDbContext<ApplicationDbContext>();
+			//.BuildServiceProvider();
 
 			// Register the Swagger generator, defining 1 or more Swagger documents
 			services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info {Title = "My API", Version = "v1"}); });
@@ -68,8 +70,6 @@
 
 			builder.Register(c => ApplicationContainer).As<IContainer>().SingleInstance();
 		}
-
-		private IContainer ApplicationContainer { get; set; }
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)

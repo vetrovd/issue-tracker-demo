@@ -21,7 +21,7 @@ namespace IssueTracker.Issues.WebApi
 		}
 
 		[HttpGet("")]
-		[ProducesResponseType(typeof(List<Issue>), 200)]
+		[ProducesResponseType(typeof(List<GetFullIssueResult>), 200)]
 		[ProducesResponseType(typeof(List<ErrorDto>), 400)]
 		public async Task<List<GetFullIssueResult>> GetAllIssues()
 		{

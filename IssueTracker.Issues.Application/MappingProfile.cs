@@ -4,7 +4,6 @@ namespace IssueTracker.Issues.Handlers
 	using IssueTracker.Issues.Domain.Issue;
 	using IssueTracker.Issues.Handlers.CommandsResults;
 	using IssueTracker.Issues.Handlers.QueriesResults;
-	using IssueTracker.Issues.Handlers.QueryHandlers;
 
 	public class MappingProfile : Profile
 	{
@@ -12,7 +11,7 @@ namespace IssueTracker.Issues.Handlers
 		{
 			CreateMap<Issue, IssueCreatedResult>()
 				.ForMember(
-					dest => dest.Id, 
+					dest => dest.Id,
 					opts => opts.MapFrom(source => source.Id))
 				.ForMember(
 					dest => dest.Name,
@@ -24,7 +23,7 @@ namespace IssueTracker.Issues.Handlers
 
 			CreateMap<Issue, GetFullIssueResult>()
 				.ForMember(
-					dest => dest.Id, 
+					dest => dest.Id,
 					opts => opts.MapFrom(source => source.Id))
 				.ForMember(
 					dest => dest.Name,

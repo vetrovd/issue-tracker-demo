@@ -6,7 +6,6 @@ namespace IssueTracker.Web.App.IoC.Framework
 	using System.Reflection;
 	using Autofac;
 	using AutoMapper;
-	using IssueTracker.Framework.Abstractions.Domain;
 	using IssueTracker.Framework.Decorators;
 	using IssueTracker.Framework.Decorators.Interfaces;
 	using IssueTracker.Issues.Handlers;
@@ -25,10 +24,7 @@ namespace IssueTracker.Web.App.IoC.Framework
 				.ToArray();
 
 
-			var mappingConfig = new MapperConfiguration(mc =>
-			{
-				mc.AddProfile<MappingProfile>();
-			});
+			var mappingConfig = new MapperConfiguration(mc => { mc.AddProfile<MappingProfile>(); });
 			var mapper = mappingConfig.CreateMapper();
 			builder.RegisterInstance(mapper).As<IMapper>().SingleInstance();
 
@@ -48,6 +44,8 @@ namespace IssueTracker.Web.App.IoC.Framework
 			builder.AddMediatR(assemblies);
 
 			builder.RegisterAssemblyTypes(assemblies).AsImplementedInterfaces().InstancePerDependency();
+
+			//builder.RegisterType<ApplicationDbContext>().AsSelf().InstancePerRequest();
 		}
 	}
 }

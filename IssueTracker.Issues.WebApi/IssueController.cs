@@ -6,7 +6,6 @@ namespace IssueTracker.Issues.WebApi
 	using IssueTracker.Issues.Domain.Issue;
 	using IssueTracker.Issues.Handlers.Commands;
 	using IssueTracker.Issues.Handlers.CommandsResults;
-	using IssueTracker.Issues.Handlers.Queries;
 	using MediatR;
 	using Microsoft.AspNetCore.Mvc;
 	using Microsoft.Extensions.Logging;

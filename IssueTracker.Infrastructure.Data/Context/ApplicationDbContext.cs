@@ -25,7 +25,7 @@ namespace IssueTracker.Infrastructure.Data.Context
 			modelBuilder.Entity<Issue>().ToTable("Issue");
 
 			modelBuilder.Entity<Issue>().Property(issue => issue.Id).ValueGeneratedOnAdd();
-			modelBuilder.Entity<Issue>().HasKey(p => p.Id).HasName("project_pkey");
+			modelBuilder.Entity<Issue>().HasKey(issue => issue.Id);
 
 			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Name, name =>
 				{

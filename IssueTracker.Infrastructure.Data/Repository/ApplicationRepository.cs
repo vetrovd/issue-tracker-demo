@@ -1,4 +1,4 @@
-namespace IssueTracker.Infrastructure.Data
+namespace IssueTracker.Infrastructure.Data.Repository
 {
 	using IssueTracker.Framework.Abstractions.Data;
 	using IssueTracker.Framework.Abstractions.Domain;

@@ -7,6 +7,7 @@ namespace IssueTracker.Infrastructure.Data.UoW
 	using IssueTracker.Framework.Abstractions.Data;
 	using IssueTracker.Framework.Abstractions.Domain;
 	using IssueTracker.Infrastructure.Data.Context;
+	using IssueTracker.Infrastructure.Data.Repository;
 
 	public class UnitOfWork: IUnitOfWork
 	{
@@ -21,7 +22,7 @@ namespace IssueTracker.Infrastructure.Data.UoW
 
 		public IRepository<T> Repository<T>() where T : DomainModel
 		{
-			var repository = _container.Resolve<IRepository<T>>();
+			var repository = new ApplicationRepository<T>(_dbContext);
 			return repository;
 		}
 

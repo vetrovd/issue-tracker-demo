@@ -2,9 +2,8 @@ namespace IssueTracker.Web.App.IoC.Infrastructure
 {
 	using Autofac;
 	using IssueTracker.Framework.Abstractions.Data;
-	using IssueTracker.Infrastructure.Data;
 	using IssueTracker.Infrastructure.Data.Context;
-	using Module = Autofac.Module;
+	using IssueTracker.Infrastructure.Data.Repository;
 
 	public class InfrastructureModule : Module
 	{

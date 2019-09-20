@@ -21,12 +21,13 @@ namespace IssueTracker.Issues.Handlers.CommandHandlers
 			_unitOfWork = unitOfWork;
 		}
 
-		public async Task<IssueCreatedResult> Handle(CreateIssue request, CancellationToken cancellationToken)
+		public async Task<IssueCreatedResult> Handle(CreateIssue request, CancellationToken cancelationToken)
 		{
 			var issue = new Issue(new Name(request.Name), new Description(request.Description));
 			using (_unitOfWork)
 			{
-				issue = await _unitOfWork.Repository<Issue>().InsertAsync(issue);
+				var repository =  _unitOfWork.Repository<Issue>();
+				issue = await repository.InsertAsync(issue);
 				_unitOfWork.SaveChanges();
 			}
 			var result = _mapper.Map<IssueCreatedResult>(issue);

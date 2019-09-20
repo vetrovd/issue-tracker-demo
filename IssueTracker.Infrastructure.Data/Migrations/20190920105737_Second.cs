@@ -1,31 +1,31 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace IssueTracker.Infrastructure.Data.Migrations
+﻿namespace IssueTracker.Infrastructure.Data.Migrations
 {
-    public partial class Second : Migration
-    {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.AddColumn<string>(
-                name: "Description_Value",
-                table: "Issue",
-                nullable: true);
+	using Microsoft.EntityFrameworkCore.Migrations;
 
-            migrationBuilder.AddColumn<string>(
-                name: "Name_Value",
-                table: "Issue",
-                nullable: true);
-        }
+	public partial class Second : Migration
+	{
+		protected override void Up(MigrationBuilder migrationBuilder)
+		{
+			migrationBuilder.AddColumn<string>(
+				"Description_Value",
+				"Issue",
+				nullable: true);
 
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.DropColumn(
-                name: "Description_Value",
-                table: "Issue");
+			migrationBuilder.AddColumn<string>(
+				"Name_Value",
+				"Issue",
+				nullable: true);
+		}
 
-            migrationBuilder.DropColumn(
-                name: "Name_Value",
-                table: "Issue");
-        }
-    }
+		protected override void Down(MigrationBuilder migrationBuilder)
+		{
+			migrationBuilder.DropColumn(
+				"Description_Value",
+				"Issue");
+
+			migrationBuilder.DropColumn(
+				"Name_Value",
+				"Issue");
+		}
+	}
 }
