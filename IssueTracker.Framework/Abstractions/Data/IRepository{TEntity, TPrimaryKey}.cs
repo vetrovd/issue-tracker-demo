@@ -9,6 +9,10 @@ namespace IssueTracker.Framework.Abstractions.Data
 
 	public interface IRepository<TEntity, TPrimaryKey> where TEntity : DomainModel
 	{
+		IQueryable<TEntity> GetAllForQuery();
+
+		IQueryable<TEntity> GetAllForQueryIncluding(params Expression<Func<TEntity, object>>[] propertySelector);
+
 		IQueryable<TEntity> GetAll();
 
 		IQueryable<TEntity> GetAllIncluding(params Expression<Func<TEntity, object>>[] propertySelectors);

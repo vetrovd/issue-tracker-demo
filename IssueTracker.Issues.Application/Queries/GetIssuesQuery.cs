@@ -3,8 +3,9 @@ namespace IssueTracker.Issues.Handlers.Queries
 	using System.Collections.Generic;
 	using IssueTracker.Framework.Abstractions.Domain;
 	using IssueTracker.Issues.Domain.Issue;
+	using IssueTracker.Issues.Handlers.QueriesResults;
 
-	public class GetIssuesQuery : Query<List<Issue>>
+	public class GetIssuesQuery : Query<List<GetFullIssueResult>>
 	{
 	}
 }

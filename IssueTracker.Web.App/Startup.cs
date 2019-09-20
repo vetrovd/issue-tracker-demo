@@ -54,6 +54,8 @@
 		// "Without ConfigureContainer" mechanism shown later.
 		public void ConfigureContainer(ContainerBuilder builder)
 		{
+			builder.RegisterBuildCallback(c => ApplicationContainer = c);
+
 			builder.RegisterModule(new RegisterDecoratorsModule());
 			builder.RegisterModule(new InfrastructureModule());
 
@@ -63,7 +65,11 @@
 			builder.RegisterModule(new WebAppModule());
 			//builder.RegisterModule(new Issues.Handlers.Module());
 			//builder.RegisterModule(new);
+
+			builder.Register(c => ApplicationContainer).As<IContainer>().SingleInstance();
 		}
+
+		private IContainer ApplicationContainer { get; set; }
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)

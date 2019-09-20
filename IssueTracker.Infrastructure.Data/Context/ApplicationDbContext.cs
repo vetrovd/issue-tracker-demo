@@ -27,9 +27,20 @@ namespace IssueTracker.Infrastructure.Data.Context
 			modelBuilder.Entity<Issue>().Property(issue => issue.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<Issue>().HasKey(p => p.Id).HasName("project_pkey");
 
-			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Name);
-			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Description);
-			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Status);
+			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Name, name =>
+				{
+					name.Property(n => n.Value);
+				});
+			
+			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Description, description =>
+				{
+					description.Property(d => d.Value);
+				});
+
+			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Status, status =>
+			{
+				// status.Property(s => s.)
+			});
 		}
 	}
 }

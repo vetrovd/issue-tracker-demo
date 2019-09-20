@@ -5,6 +5,7 @@ namespace IssueTracker.Issues.WebApi
 	using IssueTracker.Framework.WebApi;
 	using IssueTracker.Issues.Domain.Issue;
 	using IssueTracker.Issues.Handlers.Queries;
+	using IssueTracker.Issues.Handlers.QueriesResults;
 	using MediatR;
 	using Microsoft.AspNetCore.Mvc;
 	using Microsoft.Extensions.Logging;
@@ -22,16 +23,7 @@ namespace IssueTracker.Issues.WebApi
 		[HttpGet("")]
 		[ProducesResponseType(typeof(List<Issue>), 200)]
 		[ProducesResponseType(typeof(List<ErrorDto>), 400)]
-		public async Task<List<Issue>> GetAllIssues()
-		{
-			var result = await _mediator.Send(new GetIssuesQuery());
-			return result;
-		}
-
-		[HttpGet("search")]
-		[ProducesResponseType(typeof(List<Issue>), 200)]
-		[ProducesResponseType(typeof(List<ErrorDto>), 400)]
-		public async Task<List<Issue>> SearchIssues([FromQuery] string text)
+		public async Task<List<GetFullIssueResult>> GetAllIssues()
 		{
 			var result = await _mediator.Send(new GetIssuesQuery());
 			return result;

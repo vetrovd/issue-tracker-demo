@@ -9,6 +9,7 @@ namespace IssueTracker.Web.App.IoC.Framework
 	using IssueTracker.Framework.Abstractions.Domain;
 	using IssueTracker.Framework.Decorators;
 	using IssueTracker.Framework.Decorators.Interfaces;
+	using IssueTracker.Issues.Handlers;
 	using MediatR;
 	using MediatR.Extensions.Autofac.DependencyInjection;
 	using Module = Autofac.Module;
@@ -26,7 +27,7 @@ namespace IssueTracker.Web.App.IoC.Framework
 
 			var mappingConfig = new MapperConfiguration(mc =>
 			{
-				//mc.AddProfile<MappingProfile>();
+				mc.AddProfile<MappingProfile>();
 			});
 			var mapper = mappingConfig.CreateMapper();
 			builder.RegisterInstance(mapper).As<IMapper>().SingleInstance();
@@ -44,8 +45,9 @@ namespace IssueTracker.Web.App.IoC.Framework
 				context => context.ImplementationType.GetInterfaces().Contains(typeof(IWithValidation))
 			);
 
-			var assembly = typeof(DomainModel).Assembly;
-			builder.AddMediatR(assembly);
+			builder.AddMediatR(assemblies);
+
+			builder.RegisterAssemblyTypes(assemblies).AsImplementedInterfaces().InstancePerDependency();
 		}
 	}
 }

@@ -1,6 +1,6 @@
-namespace IssueTracker.Issues.Handlers.CommandsResults
+namespace IssueTracker.Issues.Handlers.QueriesResults
 {
-	public class IssueCreatedResult
+	public class GetFullIssueResult
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }

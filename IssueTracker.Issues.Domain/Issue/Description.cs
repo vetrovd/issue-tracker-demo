@@ -14,7 +14,7 @@ namespace IssueTracker.Issues.Domain.Issue
 			Value = description;
 		}
 
-		public string Value { get; }
+		public string Value { get; protected set; }
 
 		protected override IEnumerable<object> GetAtomicValues()
 		{

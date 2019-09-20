@@ -32,6 +32,7 @@
           <e p="Data" t="Include">
             <e p="IRepository{TEntity, TprimaryKey}.cs" t="Include" />
             <e p="Irepository{TEntity}.cs" t="Include" />
+            <e p="IUnitOfWork.cs" t="Include" />
             <e p="RepositoryBase.cs" t="Include" />
           </e>
           <e p="Domain" t="Include">
@@ -99,14 +100,19 @@
         <e p="User.cs" t="Include" />
       </e>
       <e p="IssueTracker.Infrastructure.Data" t="IncludeRecursive">
-        <e p="ApplicationRepository.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Context" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
+          <e p="DesignTimeContextFactory.cs" t="Include" />
         </e>
-        <e p="EfRepository.cs" t="Include" />
         <e p="IssueTracker.Infrastructure.Data.csproj" t="IncludeRecursive" />
-        <e p="Module.cs" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20190920104603_Initial.cs" t="Include" />
+          <e p="20190920104603_Initial.Designer.cs" t="Include" />
+          <e p="20190920105737_Second.cs" t="Include" />
+          <e p="20190920105737_Second.Designer.cs" t="Include" />
+          <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -114,11 +120,19 @@
             </e>
           </e>
         </e>
+        <e p="Repository" t="Include">
+          <e p="ApplicationRepository.cs" t="Include" />
+          <e p="EfRepository.cs" t="Include" />
+        </e>
+        <e p="UoW" t="Include">
+          <e p="UnitOfWork.cs" t="Include" />
+        </e>
       </e>
       <e p="IssueTracker.Issues.Application" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="CommandHandlers" t="Include">
           <e p="CreateIssueHandler.cs" t="Include" />
+          <e p="Validators" t="Include" />
         </e>
         <e p="Commands" t="Include">
           <e p="CreateIssue.cs" t="Include" />
@@ -128,6 +142,7 @@
         </e>
         <e p="EventHandlers" t="Include" />
         <e p="IssueTracker.Issues.Application.csproj" t="IncludeRecursive" />
+        <e p="MappingProfile.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -136,15 +151,13 @@
           </e>
         </e>
         <e p="Queries" t="Include">
-          <e p="GetIssueQuery.cs" t="Include" />
           <e p="GetIssuesQuery.cs" t="Include" />
-          <e p="Validators" t="Include">
-            <e p="GetIssueCommandValidator.cs" t="Include" />
-          </e>
+          <e p="Validators" t="Include" />
         </e>
-        <e p="QueriesResults" t="Include" />
+        <e p="QueriesResults" t="Include">
+          <e p="GetFullIssueResult.cs" t="Include" />
+        </e>
         <e p="QueryHandlers" t="Include">
-          <e p="GetIssueHandler.cs" t="Include" />
           <e p="GetIssuesHandler.cs" t="Include" />
         </e>
       </e>

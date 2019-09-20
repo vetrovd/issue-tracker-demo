@@ -14,7 +14,7 @@ namespace IssueTracker.Issues.Domain.Issue
 			Value = name;
 		}
 
-		public string Value { get; }
+		public string Value { get; protected set; }
 
 		public bool IsValid(string value)
 		{

@@ -1,27 +1,41 @@
 namespace IssueTracker.Issues.Handlers.QueryHandlers
 {
 	using System.Collections.Generic;
+	using System.Linq;
 	using System.Threading;
 	using System.Threading.Tasks;
+	using AutoMapper;
+	using AutoMapper.QueryableExtensions;
+	using IssueTracker.Framework.Abstractions.Data;
 	using IssueTracker.Framework.Abstractions.Handlers;
 	using IssueTracker.Issues.Domain.Issue;
 	using IssueTracker.Issues.Handlers.Queries;
+	using IssueTracker.Issues.Handlers.QueriesResults;
 	using Microsoft.Extensions.Logging;
 
-	public class GetIssuesHandler : IQueryHandler<GetIssuesQuery, List<Issue>>
+	public class GetIssuesHandler : IQueryHandler<GetIssuesQuery, List<GetFullIssueResult>>
 	{
 		private readonly ILogger _logger;
+		private readonly IMapper _mapper;
+		private readonly IRepository<Issue> _repository;
 
-		public GetIssuesHandler(ILoggerFactory loggerFactory)
+		public GetIssuesHandler(ILoggerFactory loggerFactory, IRepository<Issue> repository, IMapper mapper)
 		{
+			_repository = repository;
+			_mapper = mapper;
 			_logger = loggerFactory.CreateLogger<GetIssuesHandler>();
 		}
 
-		public async Task<List<Issue>> Handle(GetIssuesQuery request, CancellationToken cancellationToken)
+		public async Task<List<GetFullIssueResult>> Handle(GetIssuesQuery request, CancellationToken cancellationToken)
 		{
 			_logger.LogWarning(">>>>>> GetIssuesHandler -> Handle");
 
-			return null;
+			var issues = _repository.GetAllForQuery()
+				.Where(a => a.Id > 0)
+				.ProjectTo<GetFullIssueResult>(_mapper.ConfigurationProvider)
+				.ToList();
+
+			return issues;
 		}
 	}
 }

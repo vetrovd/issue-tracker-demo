@@ -15,6 +15,24 @@ namespace IssueTracker.Infrastructure.Data
 
 		public virtual DbSet<TEntity> Table => Context.Set<TEntity>();
 
+		public override IQueryable<TEntity> GetAllForQuery()
+		{
+			return GetAllForQueryIncluding();
+		}
+		public override IQueryable<TEntity> GetAllForQueryIncluding(params Expression<Func<TEntity, object>>[] propertySelectors)
+		{
+			var query = Table.AsNoTracking();
+			if (propertySelectors != null && propertySelectors.Length > 0)
+			{
+				foreach (var propertySelector in propertySelectors)
+				{
+					query = query.Include(propertySelector);
+				}
+			}
+
+			return query;
+		}
+
 		public override IQueryable<TEntity> GetAll()
 		{
 			return GetAllIncluding();
