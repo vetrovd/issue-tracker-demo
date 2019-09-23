@@ -5,12 +5,12 @@ namespace IssueTracker.Users.WebApi
 	using Microsoft.AspNetCore.Mvc;
 	using Microsoft.Extensions.Logging;
 
-	[Route("users")]
-	public class UsersController : CoreApiController
+	[Route("members")]
+	public class MembersController : CoreApiController
 	{
 		private readonly IMediator _mediator;
 
-		public UsersController(IMediator mediator, ILoggerFactory loggerFactory)
+		public MembersController(IMediator mediator, ILoggerFactory loggerFactory)
 		{
 			_mediator = mediator;
 		}

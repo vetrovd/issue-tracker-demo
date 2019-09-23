@@ -5,7 +5,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="2.2.0" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IssueTracker.Contexts.Issues.Application\IssueTracker.Contexts.Issues.Application.csproj" />
+      <ProjectReference Include="..\IssueTracker.Framework\IssueTracker.Framework.csproj" />
     </ItemGroup>
 
 </Project>

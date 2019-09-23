@@ -7,7 +7,6 @@ namespace IssueTracker.App.IoC.Framework
 	using Autofac;
 	using AutoMapper;
 	using FluentValidation;
-	using IssueTracker.Framework.Abstractions.Handlers;
 	using IssueTracker.Framework.Decorators;
 	using IssueTracker.Framework.Decorators.Interfaces;
 	using IssueTracker.Issues.Handlers;
@@ -30,6 +29,7 @@ namespace IssueTracker.App.IoC.Framework
 			var mapper = mappingConfig.CreateMapper();
 			builder.RegisterInstance(mapper).As<IMapper>().SingleInstance();
 
+
 			//register SaveChanges (+ publishing events) for all commands
 			builder.RegisterGenericDecorator(
 				typeof(SaveChangesDecorator<,>),
@@ -50,13 +50,19 @@ namespace IssueTracker.App.IoC.Framework
 				typeof(IRequestHandler<,>)
 			);
 
+			//register security for every query/command
+			builder.RegisterGenericDecorator(
+				typeof(SecurityDecorator<,>),
+				typeof(IRequestHandler<,>)
+			);
+
 
 
 			builder.AddMediatR(assemblies);
 
 			builder.RegisterGeneric(typeof(AbstractValidator<>)).AsSelf().InstancePerLifetimeScope();
 
-			// builder.RegisterAssemblyTypes(assemblies).AsImplementedInterfaces().InstancePerLifetimeScope();
+			builder.RegisterAssemblyTypes(assemblies).AsImplementedInterfaces().InstancePerLifetimeScope();
 
 			//builder.RegisterType<ApplicationDbContext>().AsSelf().InstancePerRequest();
 		}

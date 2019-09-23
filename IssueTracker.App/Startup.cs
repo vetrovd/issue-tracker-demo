@@ -1,25 +1,23 @@
 ﻿namespace IssueTracker.App
 {
-	using System.IO;
 	using System.Reflection;
 	using Autofac;
 	using IssueTracker.App.IoC;
 	using IssueTracker.App.IoC.Framework;
 	using IssueTracker.App.IoC.Infrastructure;
 	using IssueTracker.App.IoC.Issues;
+	using IssueTracker.Contexts.Identity.Domain;
 	using IssueTracker.Framework.WebApi.Middleware.Exceptions;
 	using IssueTracker.Infrastructure.Data.Context;
 	using IssueTracker.Contexts.Issues.WebApi;
+	using IssueTracker.Users.WebApi;
 	using Microsoft.AspNetCore.Builder;
-	using Microsoft.AspNetCore.Diagnostics;
 	using Microsoft.AspNetCore.Hosting;
-	using Microsoft.AspNetCore.Http;
 	using Microsoft.AspNetCore.Mvc;
 	using Microsoft.EntityFrameworkCore;
 	using Microsoft.Extensions.Configuration;
 	using Microsoft.Extensions.DependencyInjection;
 	using Swashbuckle.AspNetCore.Swagger;
-	using Module = IssueTracker.Users.WebApi.Module;
 
 	public class Startup
 	{
@@ -38,8 +36,10 @@
 			services
 				.AddMvc()
 				.AddApplicationPart(typeof(IssueController).GetTypeInfo().Assembly)
-				.AddApplicationPart(typeof(Module).GetTypeInfo().Assembly)
+				.AddApplicationPart(typeof(MembersController).GetTypeInfo().Assembly)
 				.SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+			services.AddAuthorization(ConfigurePolicy.AddPolicy);
 
 			services.AddEntityFrameworkNpgsql()
 				.AddDbContext<ApplicationDbContext>();

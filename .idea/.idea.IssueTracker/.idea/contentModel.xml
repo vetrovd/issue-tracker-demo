@@ -59,6 +59,7 @@
       <e p="IssueTracker.Contexts.Identity.Domain" t="IncludeRecursive">
         <e p="Actions.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="ConfigurePolicy.cs" t="Include" />
         <e p="IssueTracker.Contexts.Identity.Domain.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -67,6 +68,7 @@
             </e>
           </e>
         </e>
+        <e p="PermissionManager.cs" t="Include" />
         <e p="Role.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
@@ -139,39 +141,38 @@
           </e>
         </e>
       </e>
-      <e p="IssueTracker.Contexts.Users.Application" t="IncludeRecursive">
+      <e p="IssueTracker.Contexts.Members.Application" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Class1.cs" t="Include" />
-        <e p="IssueTracker.Contexts.Users.Application.csproj" t="IncludeRecursive" />
+        <e p="IssueTracker.Contexts.Members.Application.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Contexts.Users.Application.AssemblyInfo.cs" t="Include" />
+              <e p="IssueTracker.Contexts.Members.Application.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
       </e>
-      <e p="IssueTracker.Contexts.Users.Domain" t="IncludeRecursive">
+      <e p="IssueTracker.Contexts.Members.Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Class1.cs" t="Include" />
-        <e p="IssueTracker.Contexts.Users.Domain.csproj" t="IncludeRecursive" />
+        <e p="IssueTracker.Contexts.Members.Domain.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Contexts.Users.Domain.AssemblyInfo.cs" t="Include" />
+              <e p="IssueTracker.Contexts.Members.Domain.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
       </e>
-      <e p="IssueTracker.Contexts.Users.WebApi" t="IncludeRecursive">
+      <e p="IssueTracker.Contexts.Members.WebApi" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="IssuesController.cs" t="Include" />
-        <e p="IssueTracker.Contexts.Users.WebApi.csproj" t="IncludeRecursive" />
-        <e p="Module.cs" t="Include" />
+        <e p="IssueTracker.Contexts.Members.WebApi.csproj" t="IncludeRecursive" />
+        <e p="MembersController.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Contexts.Users.WebApi.AssemblyInfo.cs" t="Include" />
+              <e p="IssueTracker.Contexts.Members.WebApi.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -197,6 +198,9 @@
             <e p="IEventHandler.cs" t="Include" />
             <e p="IQueryHandler.cs" t="Include" />
           </e>
+          <e p="Security" t="Include">
+            <e p="IPermissionManager.cs" t="Include" />
+          </e>
           <e p="Specifications" t="Include">
             <e p="ISpecification.cs" t="Include" />
             <e p="Specification.cs" t="Include" />
@@ -214,6 +218,7 @@
           </e>
           <e p="LogDecorator.cs" t="Include" />
           <e p="SaveChangesDecorator.cs" t="Include" />
+          <e p="SecurityDecorator.cs" t="Include" />
           <e p="TransactionDecorator.cs" t="Include" />
           <e p="ValidationDecorator.cs" t="Include" />
         </e>
@@ -222,6 +227,7 @@
           <e p="EntityDoNotExistsDomainException.cs" t="Include" />
           <e p="InvalidEntityException.cs" t="Include" />
           <e p="InvalidRequestException.cs" t="Include" />
+          <e p="SecurityException.cs" t="Include" />
         </e>
         <e p="IssueTracker.Framework.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
