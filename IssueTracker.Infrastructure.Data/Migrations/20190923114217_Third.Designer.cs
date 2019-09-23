@@ -21,7 +21,7 @@ namespace IssueTracker.Infrastructure.Data.Migrations
                 .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            modelBuilder.Entity("IssueTracker.Identity.Domain.Role", b =>
+            modelBuilder.Entity("IssueTracker.Contexts.Identity.Domain.Role", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -44,7 +44,7 @@ namespace IssueTracker.Infrastructure.Data.Migrations
                     b.ToTable("AspNetRoles");
                 });
 
-            modelBuilder.Entity("IssueTracker.Identity.Domain.User", b =>
+            modelBuilder.Entity("IssueTracker.Contexts.Identity.Domain.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -94,7 +94,7 @@ namespace IssueTracker.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("IssueTracker.Issues.Domain.Issue.Issue", b =>
+            modelBuilder.Entity("IssueTracker.Contexts.Issues.Domain.Issue.Issue", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -185,9 +185,9 @@ namespace IssueTracker.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("IssueTracker.Issues.Domain.Issue.Issue", b =>
+            modelBuilder.Entity("IssueTracker.Contexts.Issues.Domain.Issue.Issue", b =>
                 {
-                    b.OwnsOne("IssueTracker.Issues.Domain.Issue.Description", "Description", b1 =>
+                    b.OwnsOne("IssueTracker.Contexts.Issues.Domain.Issue.Description", "Description", b1 =>
                         {
                             b1.Property<int>("IssueId");
 
@@ -197,13 +197,13 @@ namespace IssueTracker.Infrastructure.Data.Migrations
 
                             b1.ToTable("Issue");
 
-                            b1.HasOne("IssueTracker.Issues.Domain.Issue.Issue")
+                            b1.HasOne("IssueTracker.Contexts.Issues.Domain.Issue.Issue")
                                 .WithOne("Description")
-                                .HasForeignKey("IssueTracker.Issues.Domain.Issue.Description", "IssueId")
+                                .HasForeignKey("IssueTracker.Contexts.Issues.Domain.Issue.Description", "IssueId")
                                 .OnDelete(DeleteBehavior.Cascade);
                         });
 
-                    b.OwnsOne("IssueTracker.Issues.Domain.Issue.Name", "Name", b1 =>
+                    b.OwnsOne("IssueTracker.Contexts.Issues.Domain.Issue.Name", "Name", b1 =>
                         {
                             b1.Property<int>("IssueId");
 
@@ -213,13 +213,13 @@ namespace IssueTracker.Infrastructure.Data.Migrations
 
                             b1.ToTable("Issue");
 
-                            b1.HasOne("IssueTracker.Issues.Domain.Issue.Issue")
+                            b1.HasOne("IssueTracker.Contexts.Issues.Domain.Issue.Issue")
                                 .WithOne("Name")
-                                .HasForeignKey("IssueTracker.Issues.Domain.Issue.Name", "IssueId")
+                                .HasForeignKey("IssueTracker.Contexts.Issues.Domain.Issue.Name", "IssueId")
                                 .OnDelete(DeleteBehavior.Cascade);
                         });
 
-                    b.OwnsOne("IssueTracker.Issues.Domain.Issue.Status", "Status", b1 =>
+                    b.OwnsOne("IssueTracker.Contexts.Issues.Domain.Issue.Status", "Status", b1 =>
                         {
                             b1.Property<int>("IssueId");
 
@@ -229,16 +229,16 @@ namespace IssueTracker.Infrastructure.Data.Migrations
 
                             b1.ToTable("Issue");
 
-                            b1.HasOne("IssueTracker.Issues.Domain.Issue.Issue")
+                            b1.HasOne("IssueTracker.Contexts.Issues.Domain.Issue.Issue")
                                 .WithOne("Status")
-                                .HasForeignKey("IssueTracker.Issues.Domain.Issue.Status", "IssueId")
+                                .HasForeignKey("IssueTracker.Contexts.Issues.Domain.Issue.Status", "IssueId")
                                 .OnDelete(DeleteBehavior.Cascade);
                         });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
-                    b.HasOne("IssueTracker.Identity.Domain.Role")
+                    b.HasOne("IssueTracker.Contexts.Identity.Domain.Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -246,7 +246,7 @@ namespace IssueTracker.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
                 {
-                    b.HasOne("IssueTracker.Identity.Domain.User")
+                    b.HasOne("IssueTracker.Contexts.Identity.Domain.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -254,7 +254,7 @@ namespace IssueTracker.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
                 {
-                    b.HasOne("IssueTracker.Identity.Domain.User")
+                    b.HasOne("IssueTracker.Contexts.Identity.Domain.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -262,12 +262,12 @@ namespace IssueTracker.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
                 {
-                    b.HasOne("IssueTracker.Identity.Domain.Role")
+                    b.HasOne("IssueTracker.Contexts.Identity.Domain.Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("IssueTracker.Identity.Domain.User")
+                    b.HasOne("IssueTracker.Contexts.Identity.Domain.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -275,7 +275,7 @@ namespace IssueTracker.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
                 {
-                    b.HasOne("IssueTracker.Identity.Domain.User")
+                    b.HasOne("IssueTracker.Contexts.Identity.Domain.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

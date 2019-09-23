@@ -1,4 +1,4 @@
-﻿namespace IssueTracker.Web.App
+﻿namespace IssueTracker.App
 {
 	using Autofac.Extensions.DependencyInjection;
 	using Microsoft.AspNetCore;

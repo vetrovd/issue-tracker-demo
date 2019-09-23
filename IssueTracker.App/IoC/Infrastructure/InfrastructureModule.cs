@@ -1,4 +1,4 @@
-namespace IssueTracker.Web.App.IoC.Infrastructure
+namespace IssueTracker.App.IoC.Infrastructure
 {
 	using Autofac;
 	using IssueTracker.Framework.Abstractions.Data;

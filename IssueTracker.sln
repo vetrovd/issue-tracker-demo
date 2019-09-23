@@ -4,17 +4,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contexts", "Contexts", "{54
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Issues", "Issues", "{809F4D7C-9B4F-4DDF-8A96-C3D519FAF4A0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{5D2D4106-C22D-48E9-B6E7-F16DA0C02D33}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Members", "Members", "{5D2D4106-C22D-48E9-B6E7-F16DA0C02D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Web.App", "IssueTracker.Web.App\IssueTracker.Web.App.csproj", "{B170DDD2-889C-4674-8360-0679D4C716DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.App", "IssueTracker.App\IssueTracker.App.csproj", "{B170DDD2-889C-4674-8360-0679D4C716DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Framework", "IssueTracker.Framework\IssueTracker.Framework.csproj", "{F128F4DB-B358-41D5-A9B6-1502328E21FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Issues.WebApi", "IssueTracker.Issues.WebApi\IssueTracker.Issues.WebApi.csproj", "{4FB11AB6-998B-488C-AD24-D432BFF63105}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Contexts.Issues.WebApi", "IssueTracker.Contexts.Issues.WebApi\IssueTracker.Contexts.Issues.WebApi.csproj", "{4FB11AB6-998B-488C-AD24-D432BFF63105}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Issues.Domain", "IssueTracker.Issues.Domain\IssueTracker.Issues.Domain.csproj", "{9169AFD4-7861-4F2B-B166-08DF742DFCD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Contexts.Issues.Domain", "IssueTracker.Contexts.Issues.Domain\IssueTracker.Contexts.Issues.Domain.csproj", "{9169AFD4-7861-4F2B-B166-08DF742DFCD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Issues.Application", "IssueTracker.Issues.Application\IssueTracker.Issues.Application.csproj", "{ECB05A7E-F359-45B3-89C5-21903CE66767}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Contexts.Issues.Application", "IssueTracker.Contexts.Issues.Application\IssueTracker.Contexts.Issues.Application.csproj", "{ECB05A7E-F359-45B3-89C5-21903CE66767}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Framework.WebApi", "IssueTracker.Framework.WebApi\IssueTracker.Framework.WebApi.csproj", "{8FF2C154-7F0A-43B2-968C-036D612554B6}"
 EndProject
@@ -22,15 +22,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Infrastructure
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{EF85BF40-52A8-4C94-851D-D15772A31E60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Users.WebApi", "IssueTracker.Users.WebApi\IssueTracker.Users.WebApi.csproj", "{E4F92CB8-1B1D-47A9-B020-981072767E84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Contexts.Members.WebApi", "IssueTracker.Contexts.Members.WebApi\IssueTracker.Contexts.Members.WebApi.csproj", "{E4F92CB8-1B1D-47A9-B020-981072767E84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Users.Domain", "IssueTracker.Users.Domain\IssueTracker.Users.Domain.csproj", "{3F982730-D252-47EE-8C34-F64C5373CE3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Contexts.Members.Domain", "IssueTracker.Contexts.Members.Domain\IssueTracker.Contexts.Members.Domain.csproj", "{3F982730-D252-47EE-8C34-F64C5373CE3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Users.Application", "IssueTracker.Users.Application\IssueTracker.Users.Application.csproj", "{2D0762BD-C2EE-47D3-9199-F6A24971C65F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Contexts.Members.Application", "IssueTracker.Contexts.Members.Application\IssueTracker.Contexts.Members.Application.csproj", "{2D0762BD-C2EE-47D3-9199-F6A24971C65F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{07796C92-6916-4DA9-B4FA-8FD1385775AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Identity.Domain", "IssueTracker.Identity.Domain\IssueTracker.Identity.Domain.csproj", "{7A3636FE-98B0-4855-9607-C31F53367621}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Contexts.Identity.Domain", "IssueTracker.Contexts.Identity.Domain\IssueTracker.Contexts.Identity.Domain.csproj", "{7A3636FE-98B0-4855-9607-C31F53367621}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{917978A3-892D-476A-9198-CCEEAFFCF4F3}"
 EndProject
@@ -38,7 +38,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F71F58C1-051F-45E0-A696-A1205C333BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Core", "IssueTracker.Core\IssueTracker.Core.csproj", "{3042F005-179F-4E10-AE41-ED078C297321}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueTracker.Contexts.Core", "IssueTracker.Contexts.Core\IssueTracker.Contexts.Core.csproj", "{3042F005-179F-4E10-AE41-ED078C297321}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58C7635E-FCE9-4785-80C8-AA73409F751A}"
 EndProject

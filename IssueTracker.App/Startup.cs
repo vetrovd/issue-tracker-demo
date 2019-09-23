@@ -1,15 +1,15 @@
-﻿namespace IssueTracker.Web.App
+﻿namespace IssueTracker.App
 {
 	using System.IO;
 	using System.Reflection;
 	using Autofac;
+	using IssueTracker.App.IoC;
+	using IssueTracker.App.IoC.Framework;
+	using IssueTracker.App.IoC.Infrastructure;
+	using IssueTracker.App.IoC.Issues;
 	using IssueTracker.Framework.WebApi.Middleware.Exceptions;
 	using IssueTracker.Infrastructure.Data.Context;
-	using IssueTracker.Issues.WebApi;
-	using IssueTracker.Web.App.IoC;
-	using IssueTracker.Web.App.IoC.Framework;
-	using IssueTracker.Web.App.IoC.Infrastructure;
-	using IssueTracker.Web.App.IoC.Issues;
+	using IssueTracker.Contexts.Issues.WebApi;
 	using Microsoft.AspNetCore.Builder;
 	using Microsoft.AspNetCore.Diagnostics;
 	using Microsoft.AspNetCore.Hosting;

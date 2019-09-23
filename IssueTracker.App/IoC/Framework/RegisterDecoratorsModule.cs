@@ -1,4 +1,4 @@
-namespace IssueTracker.Web.App.IoC.Framework
+namespace IssueTracker.App.IoC.Framework
 {
 	using System;
 	using System.IO;

@@ -1,4 +1,4 @@
-namespace IssueTracker.Web.App.IoC
+namespace IssueTracker.App.IoC
 {
 	using Autofac;
 

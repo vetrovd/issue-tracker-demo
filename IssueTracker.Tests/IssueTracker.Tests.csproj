@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\IssueTracker.Issues.Application\IssueTracker.Issues.Application.csproj" />
+      <ProjectReference Include="..\IssueTracker.Contexts.Issues.Application\IssueTracker.Contexts.Issues.Application.csproj" />
     </ItemGroup>
 
 </Project>

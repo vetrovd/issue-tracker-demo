@@ -13,10 +13,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\IssueTracker.Contexts.Identity.Domain\IssueTracker.Contexts.Identity.Domain.csproj" />
+      <ProjectReference Include="..\IssueTracker.Contexts.Issues.Domain\IssueTracker.Contexts.Issues.Domain.csproj" />
+      <ProjectReference Include="..\IssueTracker.Contexts.Members.Domain\IssueTracker.Contexts.Members.Domain.csproj" />
       <ProjectReference Include="..\IssueTracker.Framework\IssueTracker.Framework.csproj" />
-      <ProjectReference Include="..\IssueTracker.Identity.Domain\IssueTracker.Identity.Domain.csproj" />
-      <ProjectReference Include="..\IssueTracker.Issues.Domain\IssueTracker.Issues.Domain.csproj" />
-      <ProjectReference Include="..\IssueTracker.Users.Domain\IssueTracker.Users.Domain.csproj" />
     </ItemGroup>
 
 </Project>

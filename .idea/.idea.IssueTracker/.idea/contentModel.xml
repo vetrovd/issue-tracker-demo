@@ -13,14 +13,165 @@
     <e p="C:\Users\dvetrov\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\dvetrov\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_IssueTracker.-1686292975.00" t="ExcludeRecursive" />
     <e p="C:\Users\dvetrov\RiderProjects\IssueTracker" t="IncludeFlat">
-      <e p="IssueTracker.Core" t="IncludeRecursive">
+      <e p="IssueTracker.App" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Events" t="Include" />
-        <e p="IssueTracker.Core.csproj" t="IncludeRecursive" />
+        <e p="IoC" t="Include">
+          <e p="Framework" t="Include">
+            <e p="RegisterDecoratorsModule.cs" t="Include" />
+          </e>
+          <e p="Infrastructure" t="Include">
+            <e p="InfrastructureModule.cs" t="Include" />
+          </e>
+          <e p="Issues" t="Include">
+            <e p="IssuesDomainModule.cs" t="Include" />
+            <e p="IssueshandlersModule.cs" t="Include" />
+          </e>
+          <e p="WepAppModule.cs" t="Include" />
+        </e>
+        <e p="IssueTracker.App.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Core.AssemblyInfo.cs" t="Include" />
+              <e p="IssueTracker.App.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="IssueTracker.Contexts.Core" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Events" t="Include" />
+        <e p="IssueTracker.Contexts.Core.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.Contexts.Identity.Domain" t="IncludeRecursive">
+        <e p="Actions.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IssueTracker.Contexts.Identity.Domain.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Identity.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Role.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+      </e>
+      <e p="IssueTracker.Contexts.Issues.Application" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CommandHandlers" t="Include">
+          <e p="CreateIssueHandler.cs" t="Include" />
+        </e>
+        <e p="Commands" t="Include">
+          <e p="CreateIssue.cs" t="Include" />
+          <e p="Validators" t="Include">
+            <e p="CreateIssueValidator.cs" t="Include" />
+          </e>
+        </e>
+        <e p="CommandsResults" t="Include">
+          <e p="IssueCreatedResult.cs" t="Include" />
+        </e>
+        <e p="EventHandlers" t="Include" />
+        <e p="IssueTracker.Contexts.Issues.Application.csproj" t="IncludeRecursive" />
+        <e p="MappingProfile.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Issues.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Queries" t="Include">
+          <e p="GetIssuesQuery.cs" t="Include" />
+          <e p="Validators" t="Include" />
+        </e>
+        <e p="QueriesResults" t="Include">
+          <e p="GetFullIssueResult.cs" t="Include" />
+        </e>
+        <e p="QueryHandlers" t="Include">
+          <e p="GetIssuesHandler.cs" t="Include" />
+        </e>
+      </e>
+      <e p="IssueTracker.Contexts.Issues.Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Issue" t="Include">
+          <e p="Description.cs" t="Include" />
+          <e p="Issue.cs" t="Include" />
+          <e p="Name.cs" t="Include" />
+          <e p="Status.cs" t="Include" />
+          <e p="ValidationRules" t="Include">
+            <e p="DescriptionRule.cs" t="Include" />
+            <e p="NameRule.cs" t="Include" />
+          </e>
+        </e>
+        <e p="IssueTracker.Contexts.Issues.Domain.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Issues.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.Contexts.Issues.WebApi" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IssueController.cs" t="Include" />
+        <e p="IssuesController.cs" t="Include" />
+        <e p="IssueTracker.Contexts.Issues.WebApi.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Issues.WebApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.Contexts.Users.Application" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Class1.cs" t="Include" />
+        <e p="IssueTracker.Contexts.Users.Application.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Users.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.Contexts.Users.Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Class1.cs" t="Include" />
+        <e p="IssueTracker.Contexts.Users.Domain.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Users.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="IssueTracker.Contexts.Users.WebApi" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IssuesController.cs" t="Include" />
+        <e p="IssueTracker.Contexts.Users.WebApi.csproj" t="IncludeRecursive" />
+        <e p="Module.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Users.WebApi.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -101,19 +252,6 @@
         </e>
         <e p="RemovedObjectDto.cs" t="Include" />
       </e>
-      <e p="IssueTracker.Identity.Domain" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="IssueTracker.Identity.Domain.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Identity.Domain.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Role.cs" t="Include" />
-        <e p="User.cs" t="Include" />
-      </e>
       <e p="IssueTracker.Infrastructure.Data" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Context" t="Include">
@@ -145,82 +283,13 @@
           <e p="UnitOfWork.cs" t="Include" />
         </e>
       </e>
-      <e p="IssueTracker.Issues.Application" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="CommandHandlers" t="Include">
-          <e p="CreateIssueHandler.cs" t="Include" />
-        </e>
-        <e p="Commands" t="Include">
-          <e p="CreateIssue.cs" t="Include" />
-          <e p="Validators" t="Include">
-            <e p="CreateIssueValidator.cs" t="Include" />
-          </e>
-        </e>
-        <e p="CommandsResults" t="Include">
-          <e p="IssueCreatedResult.cs" t="Include" />
-        </e>
-        <e p="EventHandlers" t="Include" />
-        <e p="IssueTracker.Issues.Application.csproj" t="IncludeRecursive" />
-        <e p="MappingProfile.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Issues.Application.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Queries" t="Include">
-          <e p="GetIssuesQuery.cs" t="Include" />
-          <e p="Validators" t="Include" />
-        </e>
-        <e p="QueriesResults" t="Include">
-          <e p="GetFullIssueResult.cs" t="Include" />
-        </e>
-        <e p="QueryHandlers" t="Include">
-          <e p="GetIssuesHandler.cs" t="Include" />
-        </e>
-      </e>
-      <e p="IssueTracker.Issues.Domain" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Issue" t="Include">
-          <e p="Description.cs" t="Include" />
-          <e p="Issue.cs" t="Include" />
-          <e p="Name.cs" t="Include" />
-          <e p="Status.cs" t="Include" />
-          <e p="ValidationRules" t="Include">
-            <e p="DescriptionRule.cs" t="Include" />
-            <e p="NameRule.cs" t="Include" />
-          </e>
-        </e>
-        <e p="IssueTracker.Issues.Domain.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Issues.Domain.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
-      <e p="IssueTracker.Issues.WebApi" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="IssueController.cs" t="Include" />
-        <e p="IssuesController.cs" t="Include" />
-        <e p="IssueTracker.Issues.WebApi.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Issues.WebApi.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
       <e p="IssueTracker.sln" t="IncludeFlat" />
       <e p="IssueTracker.Tests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Helpers.cs" t="Include" />
         <e p="Issues" t="Include">
           <e p="Domain" t="Include">
             <e p="Issues" t="Include">
+              <e p="DescriptionTests.cs" t="Include" />
               <e p="IssueTests.cs" t="Include" />
               <e p="NameTests.cs" t="Include" />
             </e>
@@ -235,81 +304,13 @@
           </e>
         </e>
       </e>
-      <e p="IssueTracker.Users.Application" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
-        <e p="IssueTracker.Users.Application.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Users.Application.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
-      <e p="IssueTracker.Users.Domain" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
-        <e p="IssueTracker.Users.Domain.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Users.Domain.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
-      <e p="IssueTracker.Users.WebApi" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="IssuesController.cs" t="Include" />
-        <e p="IssueTracker.Users.WebApi.csproj" t="IncludeRecursive" />
-        <e p="Module.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Users.WebApi.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
-      <e p="IssueTracker.Web.App" t="IncludeRecursive">
-        <e p="appsettings.Development.json" t="Include" />
-        <e p="appsettings.json" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="IoC" t="Include">
-          <e p="Framework" t="Include">
-            <e p="RegisterDecoratorsModule.cs" t="Include" />
-          </e>
-          <e p="Infrastructure" t="Include">
-            <e p="InfrastructureModule.cs" t="Include" />
-          </e>
-          <e p="Issues" t="Include">
-            <e p="IssuesDomainModule.cs" t="Include" />
-            <e p="IssueshandlersModule.cs" t="Include" />
-          </e>
-          <e p="WepAppModule.cs" t="Include" />
-        </e>
-        <e p="IssueTracker.Web.App.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Web.App.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Program.cs" t="Include" />
-        <e p="Properties" t="Include">
-          <e p="launchSettings.json" t="Include" />
-        </e>
-        <e p="Startup.cs" t="Include" />
-      </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="src" t="Include">
         <e p="Contexts" t="Include">
           <e p="Core" t="Include" />
           <e p="Identity" t="Include" />
           <e p="Issues" t="Include" />
-          <e p="Users" t="Include" />
+          <e p="Members" t="Include" />
         </e>
         <e p="Framework" t="Include" />
         <e p="Infrastructure" t="Include" />

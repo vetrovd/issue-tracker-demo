@@ -1,6 +1,6 @@
 namespace IssueTracker.Infrastructure.Data.Context
 {
-	using IssueTracker.Identity.Domain;
+	using IssueTracker.Contexts.Identity.Domain;
 	using IssueTracker.Issues.Domain.Issue;
 	using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 	using Microsoft.EntityFrameworkCore;

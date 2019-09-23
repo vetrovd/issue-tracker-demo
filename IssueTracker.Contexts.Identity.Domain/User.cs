@@ -1,4 +1,4 @@
-namespace IssueTracker.Identity.Domain
+namespace IssueTracker.Contexts.Identity.Domain
 {
 	using Microsoft.AspNetCore.Identity;
 

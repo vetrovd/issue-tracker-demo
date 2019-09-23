@@ -1,4 +1,4 @@
-namespace IssueTracker.Issues.WebApi
+namespace IssueTracker.Contexts.Issues.WebApi
 {
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
