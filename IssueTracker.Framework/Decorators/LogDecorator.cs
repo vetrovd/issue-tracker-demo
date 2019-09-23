@@ -16,9 +16,9 @@ namespace IssueTracker.Framework.Decorators
 			_logger = loggerFactory.CreateLogger("LogBehavior");
 		}
 
-		public Task<TOut> Handle(TIn request, CancellationToken cancellationToken)
+		public async Task<TOut> Handle(TIn request, CancellationToken cancellationToken)
 		{
-			var result = _decorated.Handle(request, cancellationToken);
+			var result = await _decorated.Handle(request, cancellationToken);
 			_logger.LogWarning(">>>>>> LogDecorator -> Process");
 			return result;
 		}

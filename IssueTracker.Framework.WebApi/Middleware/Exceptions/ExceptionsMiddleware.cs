@@ -4,7 +4,6 @@ namespace IssueTracker.Framework.WebApi.Middleware.Exceptions
 	using System.Linq;
 	using System.Threading.Tasks;
 	using IssueTracker.Framework.Exceptions;
-	using Microsoft.AspNetCore.Builder;
 	using Microsoft.AspNetCore.Http;
 	using Microsoft.Extensions.Logging;
 	using Newtonsoft.Json;
@@ -63,14 +62,4 @@ namespace IssueTracker.Framework.WebApi.Middleware.Exceptions
 			}
 		}
 	}
-
-	// Extension method used to add the middleware to the HTTP request pipeline.
-	public static class HttpStatusCodeExceptionMiddlewareExtensions
-	{
-		public static IApplicationBuilder UseHttpStatusCodeExceptionMiddleware(this IApplicationBuilder builder)
-		{
-			return builder.UseMiddleware<HttpStatusCodeExceptionMiddleware>();
-		}
-	}
-
 }

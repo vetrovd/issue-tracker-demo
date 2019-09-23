@@ -17,11 +17,9 @@ namespace IssueTracker.Issues.Handlers.QueryHandlers
 	{
 		private readonly ILogger _logger;
 		private readonly IMapper _mapper;
-		private readonly IRepository<Issue> _repository;
 
-		public GetIssuesHandler(ILoggerFactory loggerFactory, IRepository<Issue> repository, IMapper mapper)
+		public GetIssuesHandler(ILoggerFactory loggerFactory, IMapper mapper)
 		{
-			_repository = repository;
 			_mapper = mapper;
 			_logger = loggerFactory.CreateLogger<GetIssuesHandler>();
 		}
@@ -30,12 +28,13 @@ namespace IssueTracker.Issues.Handlers.QueryHandlers
 		{
 			_logger.LogWarning(">>>>>> GetIssuesHandler -> Handle");
 
-			var issues = _repository.GetAllForQuery()
+			/*var issues = _repository.GetAllForQuery()
 				.Where(a => a.Id > 0)
 				.ProjectTo<GetFullIssueResult>(_mapper.ConfigurationProvider)
 				.ToList();
 
-			return issues;
+			return issues;*/
+			return null;
 		}
 	}
 }

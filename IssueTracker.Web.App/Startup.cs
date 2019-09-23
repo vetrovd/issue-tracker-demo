@@ -71,8 +71,6 @@
 			builder.RegisterModule(new WebAppModule());
 			//builder.RegisterModule(new Issues.Handlers.Module());
 			//builder.RegisterModule(new);
-
-			builder.Register(c => ApplicationContainer).As<IContainer>().SingleInstance();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

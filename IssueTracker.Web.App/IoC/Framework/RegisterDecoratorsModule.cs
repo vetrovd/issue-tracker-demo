@@ -6,6 +6,8 @@ namespace IssueTracker.Web.App.IoC.Framework
 	using System.Reflection;
 	using Autofac;
 	using AutoMapper;
+	using FluentValidation;
+	using IssueTracker.Framework.Abstractions.Handlers;
 	using IssueTracker.Framework.Decorators;
 	using IssueTracker.Framework.Decorators.Interfaces;
 	using IssueTracker.Issues.Handlers;
@@ -28,22 +30,33 @@ namespace IssueTracker.Web.App.IoC.Framework
 			var mapper = mappingConfig.CreateMapper();
 			builder.RegisterInstance(mapper).As<IMapper>().SingleInstance();
 
+			//register SaveChanges (+ publishing events) for all commands
+			builder.RegisterGenericDecorator(
+				typeof(SaveChangesDecorator<,>),
+				typeof(IRequestHandler<,>),
+				context => context.ImplementationType.GetInterfaces().Contains(typeof(IWithSaveChanges))
+			);
 
+			//register logging only for handlers with IWithLogging
 			builder.RegisterGenericDecorator(
 				typeof(LogDecorator<,>),
 				typeof(IRequestHandler<,>),
 				context => context.ImplementationType.GetInterfaces().Contains(typeof(IWithLogging))
 			);
 
+			//register validation for every query/command
 			builder.RegisterGenericDecorator(
 				typeof(ValidationDecorator<,>),
-				typeof(IRequestHandler<,>),
-				context => context.ImplementationType.GetInterfaces().Contains(typeof(IWithValidation))
+				typeof(IRequestHandler<,>)
 			);
+
+
 
 			builder.AddMediatR(assemblies);
 
-			builder.RegisterAssemblyTypes(assemblies).AsImplementedInterfaces().InstancePerDependency();
+			builder.RegisterGeneric(typeof(AbstractValidator<>)).AsSelf().InstancePerLifetimeScope();
+
+			// builder.RegisterAssemblyTypes(assemblies).AsImplementedInterfaces().InstancePerLifetimeScope();
 
 			//builder.RegisterType<ApplicationDbContext>().AsSelf().InstancePerRequest();
 		}

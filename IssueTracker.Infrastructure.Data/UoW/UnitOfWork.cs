@@ -1,5 +1,7 @@
 namespace IssueTracker.Infrastructure.Data.UoW
 {
+	using System.Collections.Generic;
+	using System.Linq;
 	using System.Threading.Tasks;
 	using IssueTracker.Framework.Abstractions.Data;
 	using IssueTracker.Framework.Abstractions.Domain;
@@ -19,6 +21,15 @@ namespace IssueTracker.Infrastructure.Data.UoW
 		{
 			var repository = new ApplicationRepository<T>(_dbContext);
 			return repository;
+		}
+
+		public List<Event> GetEvents()
+		{
+			return _dbContext.ChangeTracker
+				.Entries()
+				.Where(x => x is IHasEvents)
+				.SelectMany(x => (x as IHasEvents).GetDomainEvents())
+				.ToList();
 		}
 
 		public void SaveChanges()

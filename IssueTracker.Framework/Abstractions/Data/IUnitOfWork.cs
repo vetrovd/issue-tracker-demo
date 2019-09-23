@@ -1,6 +1,7 @@
 namespace IssueTracker.Framework.Abstractions.Data
 {
 	using System;
+	using System.Collections.Generic;
 	using System.Threading.Tasks;
 	using IssueTracker.Framework.Abstractions.Domain;
 
@@ -25,5 +26,7 @@ namespace IssueTracker.Framework.Abstractions.Data
 		///     since all changes saved at end of a unit of work automatically.
 		/// </summary>
 		Task SaveChangesAsync();
+
+		List<Event> GetEvents();
 	}
 }

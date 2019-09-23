@@ -10,29 +10,22 @@ namespace IssueTracker.Issues.Handlers.CommandHandlers
 	using IssueTracker.Issues.Handlers.Commands;
 	using IssueTracker.Issues.Handlers.CommandsResults;
 
-	public class CreateIssueHandler : ICommandHandler<CreateIssue, IssueCreatedResult>, IWithLogging, IWithValidation
+	public class CreateIssueHandler : ICommandHandler<CreateIssue, Issue>, IWithSaveChanges, IWithLogging
 	{
-		private readonly IMapper _mapper;
 		private readonly IUnitOfWork _unitOfWork;
 
-		public CreateIssueHandler(IRepository<Issue> repository, IMapper mapper, IUnitOfWork unitOfWork)
+		public CreateIssueHandler(IUnitOfWork unitOfWork)
 		{
-			_mapper = mapper;
 			_unitOfWork = unitOfWork;
 		}
 
-		public async Task<IssueCreatedResult> Handle(CreateIssue request, CancellationToken cancelationToken)
+		public async Task<Issue> Handle(CreateIssue request, CancellationToken cancellationToken)
 		{
 			var issue = new Issue(new Name(request.Name), new Description(request.Description));
-			using (_unitOfWork)
-			{
-				var repository = _unitOfWork.Repository<Issue>();
-				issue = await repository.InsertAsync(issue);
-				_unitOfWork.SaveChanges();
-			}
 
-			var result = _mapper.Map<IssueCreatedResult>(issue);
-			return result;
+			var repository = _unitOfWork.Repository<Issue>();
+			issue = await repository.InsertAsync(issue);
+			return issue;
 		}
 	}
 }

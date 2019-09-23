@@ -39,12 +39,18 @@
             <e p="Command.cs" t="Include" />
             <e p="DomainModel.cs" t="Include" />
             <e p="Event.cs" t="Include" />
+            <e p="IHasEvents.cs" t="Include" />
             <e p="Query.cs" t="Include" />
             <e p="ValueObject.cs" t="Include" />
           </e>
           <e p="Handlers" t="Include">
-            <e p="CommandHandler.cs" t="Include" />
+            <e p="ICommandHandler.cs" t="Include" />
+            <e p="IEventHandler.cs" t="Include" />
             <e p="IQueryHandler.cs" t="Include" />
+          </e>
+          <e p="Specifications" t="Include">
+            <e p="ISpecification.cs" t="Include" />
+            <e p="Specification.cs" t="Include" />
           </e>
           <e p="Validation" t="Include">
             <e p="ValidationRule.cs" t="Include" />
@@ -54,10 +60,11 @@
         <e p="Decorators" t="Include">
           <e p="Interfaces" t="Include">
             <e p="IWithLogging.cs" t="Include" />
+            <e p="IWithSaveChanges.cs" t="Include" />
             <e p="IWithTransaction.cs" t="Include" />
-            <e p="IWithValidation.cs" t="Include" />
           </e>
           <e p="LogDecorator.cs" t="Include" />
+          <e p="SaveChangesDecorator.cs" t="Include" />
           <e p="TransactionDecorator.cs" t="Include" />
           <e p="ValidationDecorator.cs" t="Include" />
         </e>
@@ -84,6 +91,7 @@
         <e p="Middleware" t="Include">
           <e p="Exceptions" t="Include">
             <e p="ExceptionsMiddleware.cs" t="Include" />
+            <e p="HttpStatusCodeExceptionMiddlewareExtensions.cs" t="Include" />
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -120,6 +128,8 @@
           <e p="20190920104603_Initial.Designer.cs" t="Include" />
           <e p="20190920105737_Second.cs" t="Include" />
           <e p="20190920105737_Second.Designer.cs" t="Include" />
+          <e p="20190923114217_Third.cs" t="Include" />
+          <e p="20190923114217_Third.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -141,7 +151,6 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="CommandHandlers" t="Include">
           <e p="CreateIssueHandler.cs" t="Include" />
-          <e p="Validators" t="Include" />
         </e>
         <e p="Commands" t="Include">
           <e p="CreateIssue.cs" t="Include" />
