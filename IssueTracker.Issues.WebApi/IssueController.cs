@@ -3,7 +3,6 @@ namespace IssueTracker.Issues.WebApi
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 	using IssueTracker.Framework.WebApi;
-	using IssueTracker.Issues.Domain.Issue;
 	using IssueTracker.Issues.Handlers.Commands;
 	using IssueTracker.Issues.Handlers.CommandsResults;
 	using MediatR;
@@ -21,6 +20,7 @@ namespace IssueTracker.Issues.WebApi
 		}
 
 		[HttpPost("")]
+		[ProducesResponseType(typeof(IssueCreatedResult), 200)]
 		public async Task<IssueCreatedResult> CreateIssue([FromBody] CreateIssue issue)
 		{
 			var result = await _mediator.Send(issue);

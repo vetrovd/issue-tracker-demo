@@ -1,0 +1,24 @@
+namespace IssueTracker.Issues.Domain.Issue.ValidationRules
+{
+	using IssueTracker.Framework.Abstractions.Validation;
+
+	public class DescriptionRule : ValidationRule<string>
+	{
+		private int _max = 250;
+
+		public override bool IsValid(string value)
+		{
+			if (string.IsNullOrEmpty(value))
+			{
+				return false;
+			}
+
+			if (value.Length > _max)
+			{
+				return false;
+			}
+
+			return true;
+		}
+	}
+}

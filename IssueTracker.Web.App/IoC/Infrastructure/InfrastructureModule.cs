@@ -9,11 +9,6 @@ namespace IssueTracker.Web.App.IoC.Infrastructure
 	{
 		protected override void Load(ContainerBuilder builder)
 		{
-			var assembly = typeof(ApplicationDbContext).Assembly;
-
-			builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces().InstancePerDependency();
-
-
 			builder.RegisterGeneric(typeof(ApplicationRepository<>))
 				.As(typeof(IRepository<>))
 				.InstancePerDependency();

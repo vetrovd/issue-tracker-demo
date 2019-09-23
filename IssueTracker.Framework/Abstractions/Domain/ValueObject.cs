@@ -3,9 +3,11 @@ namespace IssueTracker.Framework.Abstractions.Domain
 	using System.Collections.Generic;
 	using System.Linq;
 
-	public abstract class ValueObject
+	public abstract class ValueObject<T>
 	{
-		protected static bool EqualOperator(ValueObject left, ValueObject right)
+		public T Value { get; protected set; }
+
+		protected static bool EqualOperator(ValueObject<T> left, ValueObject<T> right)
 		{
 			if (ReferenceEquals(left, null) ^ ReferenceEquals(right, null))
 			{
@@ -15,7 +17,7 @@ namespace IssueTracker.Framework.Abstractions.Domain
 			return ReferenceEquals(left, null) || left.Equals(right);
 		}
 
-		protected static bool NotEqualOperator(ValueObject left, ValueObject right)
+		protected static bool NotEqualOperator(ValueObject<T> left, ValueObject<T> right)
 		{
 			return !EqualOperator(left, right);
 		}
@@ -29,7 +31,7 @@ namespace IssueTracker.Framework.Abstractions.Domain
 				return false;
 			}
 
-			var other = (ValueObject) obj;
+			var other = (ValueObject<T>) obj;
 			var thisValues = GetAtomicValues().GetEnumerator();
 			var otherValues = other.GetAtomicValues().GetEnumerator();
 			while (thisValues.MoveNext() && otherValues.MoveNext())

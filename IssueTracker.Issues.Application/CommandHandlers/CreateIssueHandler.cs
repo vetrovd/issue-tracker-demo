@@ -13,7 +13,7 @@ namespace IssueTracker.Issues.Handlers.CommandHandlers
 	public class CreateIssueHandler : ICommandHandler<CreateIssue, IssueCreatedResult>, IWithLogging, IWithValidation
 	{
 		private readonly IMapper _mapper;
-		private readonly  IUnitOfWork _unitOfWork;
+		private readonly IUnitOfWork _unitOfWork;
 
 		public CreateIssueHandler(IRepository<Issue> repository, IMapper mapper, IUnitOfWork unitOfWork)
 		{
@@ -26,10 +26,11 @@ namespace IssueTracker.Issues.Handlers.CommandHandlers
 			var issue = new Issue(new Name(request.Name), new Description(request.Description));
 			using (_unitOfWork)
 			{
-				var repository =  _unitOfWork.Repository<Issue>();
+				var repository = _unitOfWork.Repository<Issue>();
 				issue = await repository.InsertAsync(issue);
 				_unitOfWork.SaveChanges();
 			}
+
 			var result = _mapper.Map<IssueCreatedResult>(issue);
 			return result;
 		}

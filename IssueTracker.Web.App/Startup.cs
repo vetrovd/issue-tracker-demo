@@ -1,7 +1,9 @@
 ﻿namespace IssueTracker.Web.App
 {
+	using System.IO;
 	using System.Reflection;
 	using Autofac;
+	using IssueTracker.Framework.WebApi.Middleware.Exceptions;
 	using IssueTracker.Infrastructure.Data.Context;
 	using IssueTracker.Issues.WebApi;
 	using IssueTracker.Web.App.IoC;
@@ -9,7 +11,9 @@
 	using IssueTracker.Web.App.IoC.Infrastructure;
 	using IssueTracker.Web.App.IoC.Issues;
 	using Microsoft.AspNetCore.Builder;
+	using Microsoft.AspNetCore.Diagnostics;
 	using Microsoft.AspNetCore.Hosting;
+	using Microsoft.AspNetCore.Http;
 	using Microsoft.AspNetCore.Mvc;
 	using Microsoft.EntityFrameworkCore;
 	using Microsoft.Extensions.Configuration;
@@ -74,6 +78,8 @@
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
+			app.UseExceptionHandler("/error");
+
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
@@ -83,6 +89,8 @@
 				// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 				app.UseHsts();
 			}
+
+			app.UseHttpStatusCodeExceptionMiddleware();
 
 			// app.UseHttpsRedirection();
 			app.UseMvc();
@@ -94,8 +102,8 @@
 				c.RoutePrefix = "apidoc";
 			});
 
-			var context = app.ApplicationServices.GetRequiredService<ApplicationDbContext>();
-			context.Database.Migrate();
+			var dbContext = app.ApplicationServices.GetRequiredService<ApplicationDbContext>();
+			dbContext.Database.Migrate();
 		}
 	}
 }

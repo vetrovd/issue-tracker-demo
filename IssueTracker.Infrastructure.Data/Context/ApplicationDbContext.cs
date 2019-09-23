@@ -27,15 +27,10 @@ namespace IssueTracker.Infrastructure.Data.Context
 			modelBuilder.Entity<Issue>().Property(issue => issue.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<Issue>().HasKey(issue => issue.Id);
 
-			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Name, name =>
-				{
-					name.Property(n => n.Value);
-				});
-			
-			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Description, description =>
-				{
-					description.Property(d => d.Value);
-				});
+			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Name, name => { name.Property(n => n.Value); });
+
+			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Description,
+				description => { description.Property(d => d.Value); });
 
 			modelBuilder.Entity<Issue>().OwnsOne(issue => issue.Status, status =>
 			{

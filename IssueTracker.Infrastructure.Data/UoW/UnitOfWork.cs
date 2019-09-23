@@ -1,22 +1,17 @@
 namespace IssueTracker.Infrastructure.Data.UoW
 {
-	using System;
-	using System.Collections.Generic;
 	using System.Threading.Tasks;
-	using Autofac;
 	using IssueTracker.Framework.Abstractions.Data;
 	using IssueTracker.Framework.Abstractions.Domain;
 	using IssueTracker.Infrastructure.Data.Context;
 	using IssueTracker.Infrastructure.Data.Repository;
 
-	public class UnitOfWork: IUnitOfWork
+	public class UnitOfWork : IUnitOfWork
 	{
-		private readonly IContainer _container;
 		private readonly ApplicationDbContext _dbContext;
 
-		public UnitOfWork(IContainer container, ApplicationDbContext dbContext)
+		public UnitOfWork(ApplicationDbContext dbContext)
 		{
-			_container = container;
 			_dbContext = dbContext;
 		}
 

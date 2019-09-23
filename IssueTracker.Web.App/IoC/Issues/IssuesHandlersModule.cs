@@ -8,11 +8,6 @@ namespace IssueTracker.Web.App.IoC.Issues
 	{
 		protected override void Load(ContainerBuilder builder)
 		{
-			var issueHandlers = typeof(CreateIssueHandler).Assembly;
-
-			builder.AddMediatR(issueHandlers);
-
-			builder.RegisterAssemblyTypes(issueHandlers).AsImplementedInterfaces();
 		}
 	}
 }

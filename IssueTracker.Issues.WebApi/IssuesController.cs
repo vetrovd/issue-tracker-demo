@@ -3,7 +3,6 @@ namespace IssueTracker.Issues.WebApi
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 	using IssueTracker.Framework.WebApi;
-	using IssueTracker.Issues.Domain.Issue;
 	using IssueTracker.Issues.Handlers.Queries;
 	using IssueTracker.Issues.Handlers.QueriesResults;
 	using MediatR;
@@ -22,7 +21,6 @@ namespace IssueTracker.Issues.WebApi
 
 		[HttpGet("")]
 		[ProducesResponseType(typeof(List<GetFullIssueResult>), 200)]
-		[ProducesResponseType(typeof(List<ErrorDto>), 400)]
 		public async Task<List<GetFullIssueResult>> GetAllIssues()
 		{
 			var result = await _mediator.Send(new GetIssuesQuery());

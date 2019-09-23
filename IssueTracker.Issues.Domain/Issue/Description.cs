@@ -1,9 +1,11 @@
 namespace IssueTracker.Issues.Domain.Issue
 {
+	using System;
 	using System.Collections.Generic;
 	using IssueTracker.Framework.Abstractions.Domain;
+	using IssueTracker.Issues.Domain.Issue.ValidationRules;
 
-	public class Description : ValueObject
+	public class Description : ValueObject<string>
 	{
 		protected Description()
 		{
@@ -11,10 +13,13 @@ namespace IssueTracker.Issues.Domain.Issue
 
 		public Description(string description)
 		{
+			var validator = new DescriptionRule();
+			if (!validator.IsValid(description))
+			{
+				throw new ArgumentException();
+			}
 			Value = description;
 		}
-
-		public string Value { get; protected set; }
 
 		protected override IEnumerable<object> GetAtomicValues()
 		{
