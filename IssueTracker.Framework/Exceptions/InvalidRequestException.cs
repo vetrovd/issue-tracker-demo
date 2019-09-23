@@ -8,6 +8,11 @@ namespace IssueTracker.Framework.Exceptions
 	{
 		public IEnumerable<ValidationFailure> Errors { get; protected set; }
 
+		public InvalidRequestException()
+		{
+
+		}
+
 		public InvalidRequestException(IEnumerable<ValidationFailure> errors)
 		{
 			Errors = errors;
