@@ -1,6 +1,8 @@
 namespace IssueTracker.Contexts.Issues.WebApi
 {
 	using System.Collections.Generic;
+	using System.ComponentModel.DataAnnotations;
+	using System.Linq;
 	using System.Threading.Tasks;
 	using IssueTracker.Framework.WebApi;
 	using IssueTracker.Issues.Handlers.Queries;
@@ -8,6 +10,7 @@ namespace IssueTracker.Contexts.Issues.WebApi
 	using MediatR;
 	using Microsoft.AspNetCore.Mvc;
 	using Microsoft.Extensions.Logging;
+	using Newtonsoft.Json;
 
 	[Route("issues")]
 	public class IssuesController : CoreApiController
@@ -23,8 +26,27 @@ namespace IssueTracker.Contexts.Issues.WebApi
 		[ProducesResponseType(typeof(List<GetFullIssueResult>), 200)]
 		public async Task<List<GetFullIssueResult>> GetAllIssues()
 		{
-			var result = await _mediator.Send(new GetIssuesQuery());
+			var query = new GetIssuesQuery();
+			var result = await _mediator.Send(query);
 			return result;
+		}
+
+		[HttpGet("query")]
+		[ProducesResponseType(typeof(List<GetFullIssueResult>), 200)]
+		public async Task<IActionResult> GetAllIssuesQuery([FromQuery][Required] string[] columns)
+		{
+			var query = new GetIssuesDynamicQuery
+			{
+				Columns = columns.ToList()
+			};
+
+			var issues = await _mediator.Send(query);
+
+			var result = JsonConvert.SerializeObject(
+				issues,
+				new JsonSerializerSettings() {NullValueHandling = NullValueHandling.Ignore});
+
+			return Content(result);
 		}
 	}
 }

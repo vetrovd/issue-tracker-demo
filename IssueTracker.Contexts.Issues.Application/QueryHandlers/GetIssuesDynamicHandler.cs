@@ -13,25 +13,28 @@ namespace IssueTracker.Issues.Handlers.QueryHandlers
 	using IssueTracker.Issues.Handlers.QueriesResults;
 	using Microsoft.Extensions.Logging;
 
-	public class GetIssuesHandler : IQueryHandler<GetIssuesQuery, List<GetFullIssueResult>>
+	public class GetIssuesDynamicHandler: IQueryHandler<GetIssuesDynamicQuery, List<GetFullIssueResultDynamic>>
 	{
 		private readonly IMapper _mapper;
 		private readonly IUnitOfWork _unitOfWork;
 
-		public GetIssuesHandler(ILoggerFactory loggerFactory, IMapper mapper, IUnitOfWork unitOfWork)
+		public GetIssuesDynamicHandler(ILoggerFactory loggerFactory, IMapper mapper, IUnitOfWork unitOfWork)
 		{
 			_mapper = mapper;
 			_unitOfWork = unitOfWork;
 		}
 
-		public async Task<List<GetFullIssueResult>> Handle(GetIssuesQuery request, CancellationToken cancellationToken)
+		public async Task<List<GetFullIssueResultDynamic>> Handle(GetIssuesDynamicQuery request, CancellationToken cancellationToken)
 		{
-			var issues = _unitOfWork.Repository<Issue>()
+			var result = _unitOfWork.Repository<Issue>()
 				.GetAllForQuery()
-				.ProjectTo<GetFullIssueResult>(_mapper.ConfigurationProvider)
+				.ProjectTo<GetFullIssueResultDynamic>(
+					_mapper.ConfigurationProvider, 
+					null, 
+					request.Columns.ToArray())
 				.ToList();
 
-			return issues;
+			return result;
 		}
 	}
 }

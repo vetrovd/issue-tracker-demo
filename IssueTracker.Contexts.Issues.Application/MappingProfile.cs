@@ -31,6 +31,19 @@ namespace IssueTracker.Issues.Handlers
 				.ForMember(
 					dest => dest.Description,
 					opts => opts.MapFrom(source => source.Description.Value));
+
+
+			CreateMap<Issue, GetFullIssueResultDynamic>()
+				.ForMember(
+					dest => dest.Id,
+					opts => opts.MapFrom(source => source.Id))
+				.ForMember(
+					dest => dest.Name,
+					opts => opts.MapFrom(source => source.Name.Value))
+				.ForMember(
+					dest => dest.Description,
+					opts => opts.MapFrom(source => source.Description.Value))
+				.ForAllMembers(x=> x.ExplicitExpansion());
 		}
 	}
 }

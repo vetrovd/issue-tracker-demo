@@ -6,10 +6,10 @@ namespace IssueTracker.Contexts.Identity.Domain
 	{
 		public static void AddPolicy(AuthorizationOptions options)
 		{
-			options.AddPolicy(Actions.CreateIssue, policy =>
+			/*options.AddPolicy(Actions.CreateIssue, policy =>
 			{
-
-			});
+				  
+			});*/
 		}
 	}
 }

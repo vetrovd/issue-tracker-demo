@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c8619f-95be-4097-8546-0f5e10ac54c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/ConfigurePolicy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/PermissionManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Security/IPermissionManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IssueTracker.Framework/Decorators/SecurityDecorator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IssueTracker.Framework/Exceptions/SecurityException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/Queries/GetIssuesDynamicQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueriesResults/GetFullIssueResultDynamic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueryHandlers/GetIssuesDynamicHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IssueTracker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IssueTracker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IssueTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IssueTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IssueTracker.App/IoC/Framework/RegisterDecoratorsModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.App/IoC/Framework/RegisterDecoratorsModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IssueTracker.App/IoC/Issues/IssuesDomainModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IssueTracker.App/IoC/Issues/IssuesHandlersModule.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IssueTracker.App/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.App/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/Actions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/IssueTracker.Contexts.Identity.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/IssueTracker.Contexts.Identity.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Members.WebApi/IssuesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Members.WebApi/MembersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Members.WebApi/Module.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/ConfigurePolicy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/ConfigurePolicy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/PermissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/PermissionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/MappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueryHandlers/GetIssuesHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueryHandlers/GetIssuesHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.WebApi/IssuesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IssueTracker.Contexts.Issues.WebApi/IssuesController.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,15 +64,22 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35302C35-81DB-438A-91F3-8FEFA7A01676/fe/2f800d0e/DeveloperExceptionPageMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35302C35-81DB-438A-91F3-8FEFA7A01676/24/b4528897/DeveloperExceptionPageOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87B86F27-053E-422F-BD2C-FA375482DBD0/02/35417470/Mock`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8279F4B2-1DE1-4856-8FBF-2AE8C97AE28A/a7/92811945/AuthorizationServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Domain/DomainModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Domain/Issue/Issue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CD244751-0325-4121-9FE0-724DAFC7E191/99/ca4000dd/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Framework.WebApi/Middleware/Exceptions/ExceptionsMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E407D4BA-C36C-45DA-982B-FD389A659F31/29/ProjectionExpression.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35302C35-81DB-438A-91F3-8FEFA7A01676/1a/9f5325b7/ExceptionHandlerMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Framework/Exceptions/InvalidRequestException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/Queries/GetIssuesDynamicQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Framework/Exceptions/InvalidEntityException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueryHandlers/GetIssuesDynamicHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/366F296F-670D-4283-BC11-860CD6D4BAEC/3c/6788e6b4/ValidationException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CD244751-0325-4121-9FE0-724DAFC7E191/e2/2459d7b1/OkObjectResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Domain/Issue/Description.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Domain/Issue/Name.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueriesResults/GetFullIssueResultDynamic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Domain/ValueObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/Commands/CreateIssue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Domain/Issue/Status.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,7 +118,6 @@
     <setting file="file://$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Data/RepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81CFEBD7-44D6-44BF-BFC3-DC54BE55887F/55/d9cb1980/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87B86F27-053E-422F-BD2C-FA375482DBD0/5e/fbeb08f9/IThrows.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IssueTracker.App/IoC/Issues/IssuesDomainModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81CFEBD7-44D6-44BF-BFC3-DC54BE55887F/21/1ff6efe2/IdentityDbContext`3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9DE46E3C-963E-4872-8A29-95FD027553CC/cd/927d6553/EqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Tests/Issues/Domain/Issues/NameTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -156,7 +162,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6BCDFAAE-EEF5-425B-99B4-BFDE66161A46/14/b07cf208/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FB09D8E1-F85F-4AB5-9A53-EEFD874873CF/8B/ConstructorParameterBinding.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Framework/Exceptions/SecurityException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IssueTracker.App/IoC/Issues/IssuesHandlersModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.Framework/Decorators/SaveChangesDecorator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78AFCDD7-A608-4612-8C49-45F03EB135B8/2c/8cc3240f/IServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IssueTracker.App/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -168,15 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IssueTracker.Framework/Exceptions/InvalidEntityException.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.Issues.WebApi/IssuesController.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.Framework.WebApi/CoreApiController.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.Framework.WebApi/Middleware/Exceptions/HttpStatusCodeExceptionMiddlewareExtensions.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.Framework.WebApi/Middleware/Exceptions/ExceptionsMiddleware.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Data/IPermissionFilter.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Data/IQueryableProvider.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.Infrastructure.Data/Provider/QueryableProvider.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Specifications/ISpecification.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Specifications/Specification.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.Framework/Decorators/Interfaces/IWithEvents.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.Infrastructure.Data/Context/ApplicationDbContext.cs" />
@@ -213,12 +209,21 @@
         <option value="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/Actions.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Security/IPermissionManager.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/IssueTracker.Contexts.Identity.Domain.csproj" />
-        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/PermissionManager.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/PilicyConfiguration.cs" />
-        <option value="$PROJECT_DIR$/IssueTracker.App/Startup.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.Framework/Exceptions/SecurityException.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.Framework/Decorators/SecurityDecorator.cs" />
         <option value="$PROJECT_DIR$/IssueTracker.App/IoC/Framework/RegisterDecoratorsModule.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.App/Startup.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/ConfigurePolicy.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Identity.Domain/PermissionManager.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueriesResults/GetFullIssueResult.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/Queries/GetIssuesQuery.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueryHandlers/GetIssuesHandler.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Issues.WebApi/IssuesController.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueriesResults/GetFullIsuueResultDynamic.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/MappingProfile.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/Queries/GetIssuesDynamicQuery.cs" />
+        <option value="$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueryHandlers/GetIssuesDynamicHandler.cs" />
       </list>
     </option>
   </component>
@@ -339,7 +344,7 @@
       <workItem from="1568884608416" duration="222000" />
       <workItem from="1568884842764" duration="25156000" />
       <workItem from="1568974949734" duration="53410000" />
-      <workItem from="1569258160257" duration="4207000" />
+      <workItem from="1569258160257" duration="9418000" />
     </task>
     <servers />
   </component>
@@ -436,12 +441,6 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/IssueTracker.Contexts.Issues.Application/QueryHandlers/GetIssuesHandler.cs</url>
-          <line>35</line>
-          <properties documentPath="$PROJECT_DIR$/IssueTracker.Issues.Application/QueryHandlers/GetIssuesHandler.cs" initialLine="37" />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Data/RepositoryBase.cs</url>
           <line>88</line>
           <properties documentPath="$PROJECT_DIR$/IssueTracker.Framework/Abstractions/Data/RepositoryBase.cs" initialLine="88">
@@ -468,45 +467,6 @@
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/IssueTracker.Framework/Decorators/ValidationDecorator.cs</url>
-          <line>35</line>
-          <properties documentPath="$PROJECT_DIR$/IssueTracker.Framework/Decorators/ValidationDecorator.cs" initialLine="35">
-            <startOffsets>
-              <option value="1107" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1130" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/IssueTracker.Infrastructure.Data/UoW/UnitOfWork.cs</url>
-          <line>16</line>
-          <properties documentPath="$PROJECT_DIR$/IssueTracker.Infrastructure.Data/UoW/UnitOfWork.cs" initialLine="16">
-            <startOffsets>
-              <option value="491" />
-            </startOffsets>
-            <endOffsets>
-              <option value="514" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/IssueTracker.Infrastructure.Data/Context/ApplicationDbContext.cs</url>
-          <line>10</line>
-          <properties documentPath="$PROJECT_DIR$/IssueTracker.Infrastructure.Data/Context/ApplicationDbContext.cs" initialLine="10">
-            <startOffsets>
-              <option value="408" />
-            </startOffsets>
-            <endOffsets>
-              <option value="409" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/IssueTracker.Framework/Decorators/LogDecorator.cs</url>
           <line>20</line>
           <properties documentPath="$PROJECT_DIR$/IssueTracker.Framework/Decorators/LogDecorator.cs" initialLine="20">
@@ -518,19 +478,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/IssueTracker.Framework/Decorators/SecurityDecorator.cs</url>
-          <line>22</line>
-          <properties documentPath="$PROJECT_DIR$/IssueTracker.Framework/Decorators/SecurityDecorator.cs" initialLine="22">
-            <startOffsets>
-              <option value="758" />
-            </startOffsets>
-            <endOffsets>
-              <option value="773" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

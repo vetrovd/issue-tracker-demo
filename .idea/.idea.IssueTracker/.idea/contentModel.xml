@@ -24,10 +24,6 @@
           <e p="Infrastructure" t="Include">
             <e p="InfrastructureModule.cs" t="Include" />
           </e>
-          <e p="Issues" t="Include">
-            <e p="IssuesDomainModule.cs" t="Include" />
-            <e p="IssueshandlersModule.cs" t="Include" />
-          </e>
           <e p="WepAppModule.cs" t="Include" />
         </e>
         <e p="IssueTracker.App.csproj" t="IncludeRecursive" />
@@ -97,13 +93,16 @@
           </e>
         </e>
         <e p="Queries" t="Include">
+          <e p="GetIssuesDynamicQuery.cs" t="Include" />
           <e p="GetIssuesQuery.cs" t="Include" />
           <e p="Validators" t="Include" />
         </e>
         <e p="QueriesResults" t="Include">
           <e p="GetFullIssueResult.cs" t="Include" />
+          <e p="GetFullIssueResultDynamic.cs" t="Include" />
         </e>
         <e p="QueryHandlers" t="Include">
+          <e p="GetIssuesDynamicHandler.cs" t="Include" />
           <e p="GetIssuesHandler.cs" t="Include" />
         </e>
       </e>
