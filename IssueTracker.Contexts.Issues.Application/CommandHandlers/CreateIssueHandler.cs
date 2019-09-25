@@ -3,9 +3,9 @@ namespace IssueTracker.Issues.Handlers.CommandHandlers
 	using System.Threading;
 	using System.Threading.Tasks;
 	using AutoMapper;
-	using IssueTracker.Framework.Abstractions.Data;
-	using IssueTracker.Framework.Abstractions.Handlers;
-	using IssueTracker.Framework.Decorators.Interfaces;
+	using IssueTracker.Contexts.Core.Abstractions.Data;
+	using IssueTracker.Contexts.Core.Abstractions.Handlers;
+	using IssueTracker.Contexts.Core.Decorators.Interfaces;
 	using IssueTracker.Issues.Domain.Issue;
 	using IssueTracker.Issues.Handlers.Commands;
 	using IssueTracker.Issues.Handlers.CommandsResults;

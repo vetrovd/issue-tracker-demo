@@ -1,6 +1,6 @@
 namespace IssueTracker.Issues.Domain.Issue.ValidationRules
 {
-	using IssueTracker.Framework.Abstractions.Validation;
+	using IssueTracker.Contexts.Core.Abstractions.Validation;
 
 	public class NameRule :  ValidationRule<string>
 	{

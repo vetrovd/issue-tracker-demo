@@ -1,9 +1,8 @@
 namespace IssueTracker.Contexts.Issues.WebApi
 {
-	using System.Collections.Generic;
 	using System.Threading.Tasks;
 	using AutoMapper;
-	using IssueTracker.Framework.WebApi;
+	using IssueTracker.Contexts.Core.WebApi;
 	using IssueTracker.Issues.Handlers.Commands;
 	using IssueTracker.Issues.Handlers.CommandsResults;
 	using MediatR;

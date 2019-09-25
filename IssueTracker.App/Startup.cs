@@ -5,8 +5,8 @@
 	using IssueTracker.App.IoC;
 	using IssueTracker.App.IoC.Framework;
 	using IssueTracker.App.IoC.Infrastructure;
+	using IssueTracker.Contexts.Core.WebApi.Middleware.Exceptions;
 	using IssueTracker.Contexts.Identity.Domain;
-	using IssueTracker.Framework.WebApi.Middleware.Exceptions;
 	using IssueTracker.Infrastructure.Data.Context;
 	using IssueTracker.Contexts.Issues.WebApi;
 	using IssueTracker.Users.WebApi;

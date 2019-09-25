@@ -4,7 +4,7 @@ namespace IssueTracker.Contexts.Issues.WebApi
 	using System.ComponentModel.DataAnnotations;
 	using System.Linq;
 	using System.Threading.Tasks;
-	using IssueTracker.Framework.WebApi;
+	using IssueTracker.Contexts.Core.WebApi;
 	using IssueTracker.Issues.Handlers.Queries;
 	using IssueTracker.Issues.Handlers.QueriesResults;
 	using MediatR;

@@ -1,6 +1,6 @@
 namespace IssueTracker.Tests.Issues.Domain.Issues
 {
-	using IssueTracker.Framework.Exceptions;
+	using IssueTracker.Contexts.Core.Exceptions;
 	using IssueTracker.Issues.Domain.Issue;
 	using Xunit;
 

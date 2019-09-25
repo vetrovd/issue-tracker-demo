@@ -4,9 +4,9 @@
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <RootNamespace>IssueTracker.Users.WebApi</RootNamespace>
     </PropertyGroup>
-    
+
     <ItemGroup>
-      <ProjectReference Include="..\IssueTracker.Framework.WebApi\IssueTracker.Framework.WebApi.csproj" />
+      <ProjectReference Include="..\IssueTracker.Contexts.Core.WebApi\IssueTracker.Contexts.Core.WebApi.csproj" />
     </ItemGroup>
 
 </Project>

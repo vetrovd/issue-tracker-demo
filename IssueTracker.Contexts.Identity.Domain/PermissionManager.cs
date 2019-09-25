@@ -3,7 +3,7 @@ namespace IssueTracker.Contexts.Identity.Domain
 	using System;
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
-	using IssueTracker.Framework.Abstractions.Security;
+	using IssueTracker.Contexts.Core.Abstractions.Security;
 	using IssueTracker.Issues.Handlers.Commands;
 	using MediatR;
 	using Microsoft.AspNetCore.Authorization;
@@ -27,6 +27,7 @@ namespace IssueTracker.Contexts.Identity.Domain
 
 		public async Task<bool> IsPermittedAsync<TOut>(IRequest<TOut> request)
 		{
+			//todo: finish him!
 			return true;
 
 			var user = _httpContextAccessor?.HttpContext?.User;

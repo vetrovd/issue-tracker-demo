@@ -6,8 +6,8 @@ namespace IssueTracker.Issues.Handlers.QueryHandlers
 	using System.Threading.Tasks;
 	using AutoMapper;
 	using AutoMapper.QueryableExtensions;
-	using IssueTracker.Framework.Abstractions.Data;
-	using IssueTracker.Framework.Abstractions.Handlers;
+	using IssueTracker.Contexts.Core.Abstractions.Data;
+	using IssueTracker.Contexts.Core.Abstractions.Handlers;
 	using IssueTracker.Issues.Domain.Issue;
 	using IssueTracker.Issues.Handlers.Queries;
 	using IssueTracker.Issues.Handlers.QueriesResults;

@@ -1,7 +1,7 @@
 namespace IssueTracker.App.IoC.Infrastructure
 {
 	using Autofac;
-	using IssueTracker.Framework.Abstractions.Data;
+	using IssueTracker.Contexts.Core.Abstractions.Data;
 	using IssueTracker.Infrastructure.Data.Context;
 	using IssueTracker.Infrastructure.Data.Repository;
 	using IssueTracker.Infrastructure.Data.UoW;

@@ -1,6 +1,6 @@
 namespace IssueTracker.Users.WebApi
 {
-	using IssueTracker.Framework.WebApi;
+	using IssueTracker.Contexts.Core.WebApi;
 	using MediatR;
 	using Microsoft.AspNetCore.Mvc;
 	using Microsoft.Extensions.Logging;

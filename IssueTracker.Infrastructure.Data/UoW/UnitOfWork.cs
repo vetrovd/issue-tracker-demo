@@ -3,8 +3,8 @@ namespace IssueTracker.Infrastructure.Data.UoW
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Threading.Tasks;
-	using IssueTracker.Framework.Abstractions.Data;
-	using IssueTracker.Framework.Abstractions.Domain;
+	using IssueTracker.Contexts.Core.Abstractions.Data;
+	using IssueTracker.Contexts.Core.Abstractions.Domain;
 	using IssueTracker.Infrastructure.Data.Context;
 	using IssueTracker.Infrastructure.Data.Repository;
 

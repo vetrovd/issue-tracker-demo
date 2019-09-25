@@ -41,8 +41,57 @@
         <e p="Startup.cs" t="Include" />
       </e>
       <e p="IssueTracker.Contexts.Core" t="IncludeRecursive">
+        <e p="Abstractions" t="Include">
+          <e p="Data" t="Include">
+            <e p="IRepository{TEntity, TprimaryKey}.cs" t="Include" />
+            <e p="Irepository{TEntity}.cs" t="Include" />
+            <e p="IUnitOfWork.cs" t="Include" />
+            <e p="RepositoryBase.cs" t="Include" />
+          </e>
+          <e p="Domain" t="Include">
+            <e p="Command.cs" t="Include" />
+            <e p="DomainModel.cs" t="Include" />
+            <e p="Event.cs" t="Include" />
+            <e p="IHasEvents.cs" t="Include" />
+            <e p="Query.cs" t="Include" />
+            <e p="ValueObject.cs" t="Include" />
+          </e>
+          <e p="Handlers" t="Include">
+            <e p="ICommandHandler.cs" t="Include" />
+            <e p="IEventHandler.cs" t="Include" />
+            <e p="IQueryHandler.cs" t="Include" />
+          </e>
+          <e p="Security" t="Include">
+            <e p="IPermissionManager.cs" t="Include" />
+          </e>
+          <e p="Specifications" t="Include">
+            <e p="ISpecification.cs" t="Include" />
+            <e p="Specification.cs" t="Include" />
+          </e>
+          <e p="Validation" t="Include">
+            <e p="ValidationRule.cs" t="Include" />
+          </e>
+        </e>
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Events" t="Include" />
+        <e p="Decorators" t="Include">
+          <e p="Interfaces" t="Include">
+            <e p="IWithLogging.cs" t="Include" />
+            <e p="IWithSaveChanges.cs" t="Include" />
+            <e p="IWithTransaction.cs" t="Include" />
+          </e>
+          <e p="LogDecorator.cs" t="Include" />
+          <e p="SaveChangesDecorator.cs" t="Include" />
+          <e p="SecurityDecorator.cs" t="Include" />
+          <e p="TransactionDecorator.cs" t="Include" />
+          <e p="ValidationDecorator.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="DomainException.cs" t="Include" />
+          <e p="EntityDoNotExistsDomainException.cs" t="Include" />
+          <e p="InvalidEntityException.cs" t="Include" />
+          <e p="InvalidRequestException.cs" t="Include" />
+          <e p="SecurityException.cs" t="Include" />
+        </e>
         <e p="IssueTracker.Contexts.Core.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -51,6 +100,26 @@
             </e>
           </e>
         </e>
+      </e>
+      <e p="IssueTracker.Contexts.Core.WebApi" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CoreApiController.cs" t="Include" />
+        <e p="ErrorDto.cs" t="Include" />
+        <e p="IssueTracker.Contexts.Core.WebApi.csproj" t="IncludeRecursive" />
+        <e p="Middleware" t="Include">
+          <e p="Exceptions" t="Include">
+            <e p="ExceptionsMiddleware.cs" t="Include" />
+            <e p="HttpStatusCodeExceptionMiddlewareExtensions.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IssueTracker.Contexts.Core.WebApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="RemovedObjectDto.cs" t="Include" />
       </e>
       <e p="IssueTracker.Contexts.Identity.Domain" t="IncludeRecursive">
         <e p="Actions.cs" t="Include" />
@@ -176,87 +245,6 @@
           </e>
         </e>
       </e>
-      <e p="IssueTracker.Framework" t="IncludeRecursive">
-        <e p="Abstractions" t="Include">
-          <e p="Data" t="Include">
-            <e p="IRepository{TEntity, TprimaryKey}.cs" t="Include" />
-            <e p="Irepository{TEntity}.cs" t="Include" />
-            <e p="IUnitOfWork.cs" t="Include" />
-            <e p="RepositoryBase.cs" t="Include" />
-          </e>
-          <e p="Domain" t="Include">
-            <e p="Command.cs" t="Include" />
-            <e p="DomainModel.cs" t="Include" />
-            <e p="Event.cs" t="Include" />
-            <e p="IHasEvents.cs" t="Include" />
-            <e p="Query.cs" t="Include" />
-            <e p="ValueObject.cs" t="Include" />
-          </e>
-          <e p="Handlers" t="Include">
-            <e p="ICommandHandler.cs" t="Include" />
-            <e p="IEventHandler.cs" t="Include" />
-            <e p="IQueryHandler.cs" t="Include" />
-          </e>
-          <e p="Security" t="Include">
-            <e p="IPermissionManager.cs" t="Include" />
-          </e>
-          <e p="Specifications" t="Include">
-            <e p="ISpecification.cs" t="Include" />
-            <e p="Specification.cs" t="Include" />
-          </e>
-          <e p="Validation" t="Include">
-            <e p="ValidationRule.cs" t="Include" />
-          </e>
-        </e>
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Decorators" t="Include">
-          <e p="Interfaces" t="Include">
-            <e p="IWithLogging.cs" t="Include" />
-            <e p="IWithSaveChanges.cs" t="Include" />
-            <e p="IWithTransaction.cs" t="Include" />
-          </e>
-          <e p="LogDecorator.cs" t="Include" />
-          <e p="SaveChangesDecorator.cs" t="Include" />
-          <e p="SecurityDecorator.cs" t="Include" />
-          <e p="TransactionDecorator.cs" t="Include" />
-          <e p="ValidationDecorator.cs" t="Include" />
-        </e>
-        <e p="Exceptions" t="Include">
-          <e p="DomainException.cs" t="Include" />
-          <e p="EntityDoNotExistsDomainException.cs" t="Include" />
-          <e p="InvalidEntityException.cs" t="Include" />
-          <e p="InvalidRequestException.cs" t="Include" />
-          <e p="SecurityException.cs" t="Include" />
-        </e>
-        <e p="IssueTracker.Framework.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Framework.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
-      <e p="IssueTracker.Framework.WebApi" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="CoreApiController.cs" t="Include" />
-        <e p="ErrorDto.cs" t="Include" />
-        <e p="IssueTracker.Framework.WebApi.csproj" t="IncludeRecursive" />
-        <e p="Middleware" t="Include">
-          <e p="Exceptions" t="Include">
-            <e p="ExceptionsMiddleware.cs" t="Include" />
-            <e p="HttpStatusCodeExceptionMiddlewareExtensions.cs" t="Include" />
-          </e>
-        </e>
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="IssueTracker.Framework.WebApi.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="RemovedObjectDto.cs" t="Include" />
-      </e>
       <e p="IssueTracker.Infrastructure.Data" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Context" t="Include">
@@ -317,7 +305,6 @@
           <e p="Issues" t="Include" />
           <e p="Members" t="Include" />
         </e>
-        <e p="Framework" t="Include" />
         <e p="Infrastructure" t="Include" />
         <e p="Libs" t="Include" />
       </e>

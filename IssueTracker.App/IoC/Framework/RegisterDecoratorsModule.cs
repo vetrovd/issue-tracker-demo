@@ -7,8 +7,8 @@ namespace IssueTracker.App.IoC.Framework
 	using Autofac;
 	using AutoMapper;
 	using FluentValidation;
-	using IssueTracker.Framework.Decorators;
-	using IssueTracker.Framework.Decorators.Interfaces;
+	using IssueTracker.Contexts.Core.Decorators;
+	using IssueTracker.Contexts.Core.Decorators.Interfaces;
 	using IssueTracker.Issues.Handlers;
 	using MediatR;
 	using MediatR.Extensions.Autofac.DependencyInjection;

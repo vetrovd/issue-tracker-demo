@@ -10,8 +10,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\IssueTracker.Contexts.Core\IssueTracker.Contexts.Core.csproj" />
       <ProjectReference Include="..\IssueTracker.Contexts.Issues.Application\IssueTracker.Contexts.Issues.Application.csproj" />
-      <ProjectReference Include="..\IssueTracker.Framework\IssueTracker.Framework.csproj" />
     </ItemGroup>
 
 </Project>

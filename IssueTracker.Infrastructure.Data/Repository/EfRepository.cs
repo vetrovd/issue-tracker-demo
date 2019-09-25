@@ -3,8 +3,8 @@ namespace IssueTracker.Infrastructure.Data.Repository
 	using System;
 	using System.Linq;
 	using System.Linq.Expressions;
-	using IssueTracker.Framework.Abstractions.Data;
-	using IssueTracker.Framework.Abstractions.Domain;
+	using IssueTracker.Contexts.Core.Abstractions.Data;
+	using IssueTracker.Contexts.Core.Abstractions.Domain;
 	using Microsoft.EntityFrameworkCore;
 
 	public class EfRepository<TDbContext, TEntity, TPrimaryKey> : RepositoryBase<TEntity, TPrimaryKey>

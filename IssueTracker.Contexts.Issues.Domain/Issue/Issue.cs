@@ -1,7 +1,7 @@
 namespace IssueTracker.Issues.Domain.Issue
 {
 	using System;
-	using IssueTracker.Framework.Abstractions.Domain;
+	using IssueTracker.Contexts.Core.Abstractions.Domain;
 
 	public class Issue : DomainModel
 	{

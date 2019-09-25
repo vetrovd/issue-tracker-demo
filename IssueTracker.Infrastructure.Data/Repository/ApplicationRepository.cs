@@ -1,7 +1,7 @@
 namespace IssueTracker.Infrastructure.Data.Repository
 {
-	using IssueTracker.Framework.Abstractions.Data;
-	using IssueTracker.Framework.Abstractions.Domain;
+	using IssueTracker.Contexts.Core.Abstractions.Data;
+	using IssueTracker.Contexts.Core.Abstractions.Domain;
 	using IssueTracker.Infrastructure.Data.Context;
 
 	public class ApplicationRepository<TEntity> : EfRepository<ApplicationDbContext, TEntity, int>, IRepository<TEntity>

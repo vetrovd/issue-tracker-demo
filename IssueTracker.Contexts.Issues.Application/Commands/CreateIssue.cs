@@ -1,6 +1,6 @@
 namespace IssueTracker.Issues.Handlers.Commands
 {
-	using IssueTracker.Framework.Abstractions.Domain;
+	using IssueTracker.Contexts.Core.Abstractions.Domain;
 	using IssueTracker.Issues.Domain.Issue;
 
 	public class CreateIssue : Command<Issue>

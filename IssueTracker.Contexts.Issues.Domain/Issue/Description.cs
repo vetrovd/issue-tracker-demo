@@ -2,8 +2,8 @@ namespace IssueTracker.Issues.Domain.Issue
 {
 	using System;
 	using System.Collections.Generic;
-	using IssueTracker.Framework.Abstractions.Domain;
-	using IssueTracker.Framework.Exceptions;
+	using IssueTracker.Contexts.Core.Abstractions.Domain;
+	using IssueTracker.Contexts.Core.Exceptions;
 	using IssueTracker.Issues.Domain.Issue.ValidationRules;
 
 	public class Description : ValueObject<string>

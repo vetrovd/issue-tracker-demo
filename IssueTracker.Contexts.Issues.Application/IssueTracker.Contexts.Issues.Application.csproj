@@ -6,8 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\IssueTracker.Contexts.Core\IssueTracker.Contexts.Core.csproj" />
       <ProjectReference Include="..\IssueTracker.Contexts.Issues.Domain\IssueTracker.Contexts.Issues.Domain.csproj" />
-      <ProjectReference Include="..\IssueTracker.Framework\IssueTracker.Framework.csproj" />
     </ItemGroup>
 
     <ItemGroup>

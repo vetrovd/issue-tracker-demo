@@ -5,8 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\IssueTracker.Contexts.Core.WebApi\IssueTracker.Contexts.Core.WebApi.csproj" />
       <ProjectReference Include="..\IssueTracker.Contexts.Issues.Application\IssueTracker.Contexts.Issues.Application.csproj" />
-      <ProjectReference Include="..\IssueTracker.Framework.WebApi\IssueTracker.Framework.WebApi.csproj" />
     </ItemGroup>
 
 </Project>
